@@ -2,13 +2,17 @@
 
 ClojureScript REPL macOS app.
 
-# Building
+Interested in iOS instead? See [Replete for iOS](https://github.com/replete-repl/replete-ios).
 
-TODO
+Interested in Android instead? See [Replete for Android](https://github.com/replete-repl/replete-android).
 
 # Running
 
-TODO
+1. Clone [planck](https://github.com/mfikes/planck) into a sibling directory and build it.
+1. In the `ClojureScript/replete` directory, do `script/build`
+1. Do a `pod install` in the top level.
+1. `open Replete-MacOS.xcworkspace` with Xcode and run the app on a device or in the simulator.
+
 
 # Contributing
 

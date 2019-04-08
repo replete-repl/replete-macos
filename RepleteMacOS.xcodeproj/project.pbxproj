@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96198460225B047200B64BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619845F225B047200B64BBA /* AppDelegate.swift */; };
+		96198462225B047200B64BBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96198461225B047200B64BBA /* ViewController.swift */; };
+		96198464225B047300B64BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96198463225B047300B64BBA /* Assets.xcassets */; };
+		96198467225B047300B64BBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96198465225B047300B64BBA /* Main.storyboard */; };
+		96198473225B047300B64BBA /* RepleteMacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96198472225B047300B64BBA /* RepleteMacOSTests.swift */; };
+		9619847E225B047300B64BBA /* RepleteMacOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619847D225B047300B64BBA /* RepleteMacOSUITests.swift */; };
+		9619849E225B051B00B64BBA /* CSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619848D225B051A00B64BBA /* CSContext.m */; };
+		9619849F225B051B00B64BBA /* functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 9619848F225B051A00B64BBA /* functions.c */; };
+		961984A0225B051B00B64BBA /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = 96198491225B051B00B64BBA /* file.c */; };
+		961984A1225B051C00B64BBA /* bundle.c in Sources */ = {isa = PBXBuildFile; fileRef = 96198493225B051B00B64BBA /* bundle.c */; };
+		961984A2225B051C00B64BBA /* ufile.c in Sources */ = {isa = PBXBuildFile; fileRef = 96198495225B051B00B64BBA /* ufile.c */; };
+		961984A3225B051C00B64BBA /* jsc_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 96198497225B051B00B64BBA /* jsc_utils.c */; };
+		961984A4225B051C00B64BBA /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 9619849C225B051B00B64BBA /* io.c */; };
+		961984A5225B051C00B64BBA /* http.c in Sources */ = {isa = PBXBuildFile; fileRef = 9619849D225B051B00B64BBA /* http.c */; };
+		961984A8225B055200B64BBA /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 961984A7225B055200B64BBA /* libcurl.tbd */; };
+		961984AA225B057600B64BBA /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 961984A9225B057600B64BBA /* libicucore.tbd */; };
+		961984AC225B059000B64BBA /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 961984AB225B059000B64BBA /* libiconv.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9619846F225B047300B64BBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96198454225B047200B64BBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9619845B225B047200B64BBA;
+			remoteInfo = RepleteMacOS;
+		};
+		9619847A225B047300B64BBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96198454225B047200B64BBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9619845B225B047200B64BBA;
+			remoteInfo = RepleteMacOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9619845C225B047200B64BBA /* RepleteMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepleteMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9619845F225B047200B64BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96198461225B047200B64BBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96198463225B047300B64BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96198466225B047300B64BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96198468225B047300B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96198469225B047300B64BBA /* RepleteMacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RepleteMacOS.entitlements; sourceTree = "<group>"; };
+		9619846E225B047300B64BBA /* RepleteMacOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepleteMacOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96198472225B047300B64BBA /* RepleteMacOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepleteMacOSTests.swift; sourceTree = "<group>"; };
+		96198474225B047300B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96198479225B047300B64BBA /* RepleteMacOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepleteMacOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9619847D225B047300B64BBA /* RepleteMacOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepleteMacOSUITests.swift; sourceTree = "<group>"; };
+		9619847F225B047300B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9619848B225B051A00B64BBA /* RepleteMacOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RepleteMacOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		9619848C225B051A00B64BBA /* CSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSContext.h; path = Replete/CSContext.h; sourceTree = "<group>"; };
+		9619848D225B051A00B64BBA /* CSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSContext.m; path = Replete/CSContext.m; sourceTree = "<group>"; };
+		9619848E225B051A00B64BBA /* bundle_inflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bundle_inflate.h; path = Replete/bundle_inflate.h; sourceTree = "<group>"; };
+		9619848F225B051A00B64BBA /* functions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = functions.c; path = Replete/functions.c; sourceTree = "<group>"; };
+		96198490225B051A00B64BBA /* functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = functions.h; path = Replete/functions.h; sourceTree = "<group>"; };
+		96198491225B051B00B64BBA /* file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = file.c; path = Replete/file.c; sourceTree = "<group>"; };
+		96198492225B051B00B64BBA /* bundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bundle.h; path = Replete/bundle.h; sourceTree = "<group>"; };
+		96198493225B051B00B64BBA /* bundle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bundle.c; path = Replete/bundle.c; sourceTree = "<group>"; };
+		96198494225B051B00B64BBA /* http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = http.h; path = Replete/http.h; sourceTree = "<group>"; };
+		96198495225B051B00B64BBA /* ufile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ufile.c; path = Replete/ufile.c; sourceTree = "<group>"; };
+		96198496225B051B00B64BBA /* Replete-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Replete-Bridging-Header.h"; path = "Replete/Replete-Bridging-Header.h"; sourceTree = "<group>"; };
+		96198497225B051B00B64BBA /* jsc_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsc_utils.c; path = Replete/jsc_utils.c; sourceTree = "<group>"; };
+		96198498225B051B00B64BBA /* file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = file.h; path = Replete/file.h; sourceTree = "<group>"; };
+		96198499225B051B00B64BBA /* jsc_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsc_utils.h; path = Replete/jsc_utils.h; sourceTree = "<group>"; };
+		9619849A225B051B00B64BBA /* io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = io.h; path = Replete/io.h; sourceTree = "<group>"; };
+		9619849B225B051B00B64BBA /* ufile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ufile.h; path = Replete/ufile.h; sourceTree = "<group>"; };
+		9619849C225B051B00B64BBA /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = io.c; path = Replete/io.c; sourceTree = "<group>"; };
+		9619849D225B051B00B64BBA /* http.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = http.c; path = Replete/http.c; sourceTree = "<group>"; };
+		961984A7225B055200B64BBA /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
+		961984A9225B057600B64BBA /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		961984AB225B059000B64BBA /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96198459225B047200B64BBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				961984AC225B059000B64BBA /* libiconv.tbd in Frameworks */,
+				961984AA225B057600B64BBA /* libicucore.tbd in Frameworks */,
+				961984A8225B055200B64BBA /* libcurl.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9619846B225B047300B64BBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96198476225B047300B64BBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96198453225B047200B64BBA = {
+			isa = PBXGroup;
+			children = (
+				9619848E225B051A00B64BBA /* bundle_inflate.h */,
+				96198493225B051B00B64BBA /* bundle.c */,
+				96198492225B051B00B64BBA /* bundle.h */,
+				9619848C225B051A00B64BBA /* CSContext.h */,
+				9619848D225B051A00B64BBA /* CSContext.m */,
+				96198491225B051B00B64BBA /* file.c */,
+				96198498225B051B00B64BBA /* file.h */,
+				9619848F225B051A00B64BBA /* functions.c */,
+				96198490225B051A00B64BBA /* functions.h */,
+				9619849D225B051B00B64BBA /* http.c */,
+				96198494225B051B00B64BBA /* http.h */,
+				9619849C225B051B00B64BBA /* io.c */,
+				9619849A225B051B00B64BBA /* io.h */,
+				96198497225B051B00B64BBA /* jsc_utils.c */,
+				96198499225B051B00B64BBA /* jsc_utils.h */,
+				96198496225B051B00B64BBA /* Replete-Bridging-Header.h */,
+				96198495225B051B00B64BBA /* ufile.c */,
+				9619849B225B051B00B64BBA /* ufile.h */,
+				9619845E225B047200B64BBA /* RepleteMacOS */,
+				96198471225B047300B64BBA /* RepleteMacOSTests */,
+				9619847C225B047300B64BBA /* RepleteMacOSUITests */,
+				9619845D225B047200B64BBA /* Products */,
+				9619848B225B051A00B64BBA /* RepleteMacOS-Bridging-Header.h */,
+				961984A6225B055100B64BBA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9619845D225B047200B64BBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9619845C225B047200B64BBA /* RepleteMacOS.app */,
+				9619846E225B047300B64BBA /* RepleteMacOSTests.xctest */,
+				96198479225B047300B64BBA /* RepleteMacOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9619845E225B047200B64BBA /* RepleteMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				9619845F225B047200B64BBA /* AppDelegate.swift */,
+				96198461225B047200B64BBA /* ViewController.swift */,
+				96198463225B047300B64BBA /* Assets.xcassets */,
+				96198465225B047300B64BBA /* Main.storyboard */,
+				96198468225B047300B64BBA /* Info.plist */,
+				96198469225B047300B64BBA /* RepleteMacOS.entitlements */,
+			);
+			path = RepleteMacOS;
+			sourceTree = "<group>";
+		};
+		96198471225B047300B64BBA /* RepleteMacOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				96198472225B047300B64BBA /* RepleteMacOSTests.swift */,
+				96198474225B047300B64BBA /* Info.plist */,
+			);
+			path = RepleteMacOSTests;
+			sourceTree = "<group>";
+		};
+		9619847C225B047300B64BBA /* RepleteMacOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9619847D225B047300B64BBA /* RepleteMacOSUITests.swift */,
+				9619847F225B047300B64BBA /* Info.plist */,
+			);
+			path = RepleteMacOSUITests;
+			sourceTree = "<group>";
+		};
+		961984A6225B055100B64BBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				961984AB225B059000B64BBA /* libiconv.tbd */,
+				961984A9225B057600B64BBA /* libicucore.tbd */,
+				961984A7225B055200B64BBA /* libcurl.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9619845B225B047200B64BBA /* RepleteMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96198482225B047300B64BBA /* Build configuration list for PBXNativeTarget "RepleteMacOS" */;
+			buildPhases = (
+				96198458225B047200B64BBA /* Sources */,
+				96198459225B047200B64BBA /* Frameworks */,
+				9619845A225B047200B64BBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RepleteMacOS;
+			productName = RepleteMacOS;
+			productReference = 9619845C225B047200B64BBA /* RepleteMacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9619846D225B047300B64BBA /* RepleteMacOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96198485225B047300B64BBA /* Build configuration list for PBXNativeTarget "RepleteMacOSTests" */;
+			buildPhases = (
+				9619846A225B047300B64BBA /* Sources */,
+				9619846B225B047300B64BBA /* Frameworks */,
+				9619846C225B047300B64BBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96198470225B047300B64BBA /* PBXTargetDependency */,
+			);
+			name = RepleteMacOSTests;
+			productName = RepleteMacOSTests;
+			productReference = 9619846E225B047300B64BBA /* RepleteMacOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		96198478225B047300B64BBA /* RepleteMacOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96198488225B047300B64BBA /* Build configuration list for PBXNativeTarget "RepleteMacOSUITests" */;
+			buildPhases = (
+				96198475225B047300B64BBA /* Sources */,
+				96198476225B047300B64BBA /* Frameworks */,
+				96198477225B047300B64BBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9619847B225B047300B64BBA /* PBXTargetDependency */,
+			);
+			name = RepleteMacOSUITests;
+			productName = RepleteMacOSUITests;
+			productReference = 96198479225B047300B64BBA /* RepleteMacOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96198454225B047200B64BBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Jason Jobe";
+				TargetAttributes = {
+					9619845B225B047200B64BBA = {
+						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
+					};
+					9619846D225B047300B64BBA = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 9619845B225B047200B64BBA;
+					};
+					96198478225B047300B64BBA = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 9619845B225B047200B64BBA;
+					};
+				};
+			};
+			buildConfigurationList = 96198457225B047200B64BBA /* Build configuration list for PBXProject "RepleteMacOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96198453225B047200B64BBA;
+			productRefGroup = 9619845D225B047200B64BBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9619845B225B047200B64BBA /* RepleteMacOS */,
+				9619846D225B047300B64BBA /* RepleteMacOSTests */,
+				96198478225B047300B64BBA /* RepleteMacOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9619845A225B047200B64BBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96198464225B047300B64BBA /* Assets.xcassets in Resources */,
+				96198467225B047300B64BBA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9619846C225B047300B64BBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96198477225B047300B64BBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96198458225B047200B64BBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				961984A0225B051B00B64BBA /* file.c in Sources */,
+				961984A2225B051C00B64BBA /* ufile.c in Sources */,
+				9619849E225B051B00B64BBA /* CSContext.m in Sources */,
+				9619849F225B051B00B64BBA /* functions.c in Sources */,
+				961984A3225B051C00B64BBA /* jsc_utils.c in Sources */,
+				961984A5225B051C00B64BBA /* http.c in Sources */,
+				961984A1225B051C00B64BBA /* bundle.c in Sources */,
+				96198462225B047200B64BBA /* ViewController.swift in Sources */,
+				961984A4225B051C00B64BBA /* io.c in Sources */,
+				96198460225B047200B64BBA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9619846A225B047300B64BBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96198473225B047300B64BBA /* RepleteMacOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96198475225B047300B64BBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9619847E225B047300B64BBA /* RepleteMacOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96198470225B047300B64BBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9619845B225B047200B64BBA /* RepleteMacOS */;
+			targetProxy = 9619846F225B047300B64BBA /* PBXContainerItemProxy */;
+		};
+		9619847B225B047300B64BBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9619845B225B047200B64BBA /* RepleteMacOS */;
+			targetProxy = 9619847A225B047300B64BBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96198465225B047300B64BBA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96198466225B047300B64BBA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96198480225B047300B64BBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96198481225B047300B64BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		96198483225B047300B64BBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RepleteMacOS/RepleteMacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
+				INFOPLIST_FILE = RepleteMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RepleteMacOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		96198484225B047300B64BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RepleteMacOS/RepleteMacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
+				INFOPLIST_FILE = RepleteMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RepleteMacOS-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		96198486225B047300B64BBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
+				INFOPLIST_FILE = RepleteMacOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepleteMacOS.app/Contents/MacOS/RepleteMacOS";
+			};
+			name = Debug;
+		};
+		96198487225B047300B64BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
+				INFOPLIST_FILE = RepleteMacOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepleteMacOS.app/Contents/MacOS/RepleteMacOS";
+			};
+			name = Release;
+		};
+		96198489225B047300B64BBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
+				INFOPLIST_FILE = RepleteMacOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = RepleteMacOS;
+			};
+			name = Debug;
+		};
+		9619848A225B047300B64BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
+				INFOPLIST_FILE = RepleteMacOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = RepleteMacOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96198457225B047200B64BBA /* Build configuration list for PBXProject "RepleteMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96198480225B047300B64BBA /* Debug */,
+				96198481225B047300B64BBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96198482225B047300B64BBA /* Build configuration list for PBXNativeTarget "RepleteMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96198483225B047300B64BBA /* Debug */,
+				96198484225B047300B64BBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96198485225B047300B64BBA /* Build configuration list for PBXNativeTarget "RepleteMacOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96198486225B047300B64BBA /* Debug */,
+				96198487225B047300B64BBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96198488225B047300B64BBA /* Build configuration list for PBXNativeTarget "RepleteMacOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96198489225B047300B64BBA /* Debug */,
+				9619848A225B047300B64BBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96198454225B047200B64BBA /* Project object */;
+}

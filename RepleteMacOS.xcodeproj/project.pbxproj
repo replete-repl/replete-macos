@@ -58,24 +58,24 @@
 		9619847D225B047300B64BBA /* RepleteMacOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepleteMacOSUITests.swift; sourceTree = "<group>"; };
 		9619847F225B047300B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9619848B225B051A00B64BBA /* RepleteMacOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RepleteMacOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		9619848C225B051A00B64BBA /* CSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSContext.h; path = Replete/CSContext.h; sourceTree = "<group>"; };
-		9619848D225B051A00B64BBA /* CSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSContext.m; path = Replete/CSContext.m; sourceTree = "<group>"; };
-		9619848E225B051A00B64BBA /* bundle_inflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bundle_inflate.h; path = Replete/bundle_inflate.h; sourceTree = "<group>"; };
-		9619848F225B051A00B64BBA /* functions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = functions.c; path = Replete/functions.c; sourceTree = "<group>"; };
-		96198490225B051A00B64BBA /* functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = functions.h; path = Replete/functions.h; sourceTree = "<group>"; };
-		96198491225B051B00B64BBA /* file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = file.c; path = Replete/file.c; sourceTree = "<group>"; };
-		96198492225B051B00B64BBA /* bundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bundle.h; path = Replete/bundle.h; sourceTree = "<group>"; };
-		96198493225B051B00B64BBA /* bundle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bundle.c; path = Replete/bundle.c; sourceTree = "<group>"; };
-		96198494225B051B00B64BBA /* http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = http.h; path = Replete/http.h; sourceTree = "<group>"; };
-		96198495225B051B00B64BBA /* ufile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ufile.c; path = Replete/ufile.c; sourceTree = "<group>"; };
-		96198496225B051B00B64BBA /* Replete-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Replete-Bridging-Header.h"; path = "Replete/Replete-Bridging-Header.h"; sourceTree = "<group>"; };
-		96198497225B051B00B64BBA /* jsc_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsc_utils.c; path = Replete/jsc_utils.c; sourceTree = "<group>"; };
-		96198498225B051B00B64BBA /* file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = file.h; path = Replete/file.h; sourceTree = "<group>"; };
-		96198499225B051B00B64BBA /* jsc_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsc_utils.h; path = Replete/jsc_utils.h; sourceTree = "<group>"; };
-		9619849A225B051B00B64BBA /* io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = io.h; path = Replete/io.h; sourceTree = "<group>"; };
-		9619849B225B051B00B64BBA /* ufile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ufile.h; path = Replete/ufile.h; sourceTree = "<group>"; };
-		9619849C225B051B00B64BBA /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = io.c; path = Replete/io.c; sourceTree = "<group>"; };
-		9619849D225B051B00B64BBA /* http.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = http.c; path = Replete/http.c; sourceTree = "<group>"; };
+		9619848C225B051A00B64BBA /* CSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSContext.h; sourceTree = "<group>"; };
+		9619848D225B051A00B64BBA /* CSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSContext.m; sourceTree = "<group>"; };
+		9619848E225B051A00B64BBA /* bundle_inflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bundle_inflate.h; sourceTree = "<group>"; };
+		9619848F225B051A00B64BBA /* functions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = functions.c; sourceTree = "<group>"; };
+		96198490225B051A00B64BBA /* functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = functions.h; sourceTree = "<group>"; };
+		96198491225B051B00B64BBA /* file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = file.c; sourceTree = "<group>"; };
+		96198492225B051B00B64BBA /* bundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bundle.h; sourceTree = "<group>"; };
+		96198493225B051B00B64BBA /* bundle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bundle.c; sourceTree = "<group>"; };
+		96198494225B051B00B64BBA /* http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http.h; sourceTree = "<group>"; };
+		96198495225B051B00B64BBA /* ufile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ufile.c; sourceTree = "<group>"; };
+		96198496225B051B00B64BBA /* Replete-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Replete-Bridging-Header.h"; sourceTree = "<group>"; };
+		96198497225B051B00B64BBA /* jsc_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jsc_utils.c; sourceTree = "<group>"; };
+		96198498225B051B00B64BBA /* file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file.h; sourceTree = "<group>"; };
+		96198499225B051B00B64BBA /* jsc_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsc_utils.h; sourceTree = "<group>"; };
+		9619849A225B051B00B64BBA /* io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
+		9619849B225B051B00B64BBA /* ufile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ufile.h; sourceTree = "<group>"; };
+		9619849C225B051B00B64BBA /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
+		9619849D225B051B00B64BBA /* http.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = http.c; sourceTree = "<group>"; };
 		961984A7225B055200B64BBA /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
 		961984A9225B057600B64BBA /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		961984AB225B059000B64BBA /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -113,25 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				9619845E225B047200B64BBA /* RepleteMacOS */,
-				961984AE225B59E100B64BBA /* New Group */,
-				9619848E225B051A00B64BBA /* bundle_inflate.h */,
-				96198493225B051B00B64BBA /* bundle.c */,
-				96198492225B051B00B64BBA /* bundle.h */,
-				9619848C225B051A00B64BBA /* CSContext.h */,
-				9619848D225B051A00B64BBA /* CSContext.m */,
-				96198491225B051B00B64BBA /* file.c */,
-				96198498225B051B00B64BBA /* file.h */,
-				9619848F225B051A00B64BBA /* functions.c */,
-				96198490225B051A00B64BBA /* functions.h */,
-				9619849D225B051B00B64BBA /* http.c */,
-				96198494225B051B00B64BBA /* http.h */,
-				9619849C225B051B00B64BBA /* io.c */,
-				9619849A225B051B00B64BBA /* io.h */,
-				96198497225B051B00B64BBA /* jsc_utils.c */,
-				96198499225B051B00B64BBA /* jsc_utils.h */,
-				96198496225B051B00B64BBA /* Replete-Bridging-Header.h */,
-				96198495225B051B00B64BBA /* ufile.c */,
-				9619849B225B051B00B64BBA /* ufile.h */,
+				961984AE225B59E100B64BBA /* Replete */,
 				96198471225B047300B64BBA /* RepleteMacOSTests */,
 				9619847C225B047300B64BBA /* RepleteMacOSUITests */,
 				9619845D225B047200B64BBA /* Products */,
@@ -191,11 +173,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		961984AE225B59E100B64BBA /* New Group */ = {
+		961984AE225B59E100B64BBA /* Replete */ = {
 			isa = PBXGroup;
 			children = (
+				9619848C225B051A00B64BBA /* CSContext.h */,
+				9619848D225B051A00B64BBA /* CSContext.m */,
+				9619848E225B051A00B64BBA /* bundle_inflate.h */,
+				96198493225B051B00B64BBA /* bundle.c */,
+				96198492225B051B00B64BBA /* bundle.h */,
+				96198491225B051B00B64BBA /* file.c */,
+				96198498225B051B00B64BBA /* file.h */,
+				9619848F225B051A00B64BBA /* functions.c */,
+				96198490225B051A00B64BBA /* functions.h */,
+				9619849D225B051B00B64BBA /* http.c */,
+				96198494225B051B00B64BBA /* http.h */,
+				9619849C225B051B00B64BBA /* io.c */,
+				9619849A225B051B00B64BBA /* io.h */,
+				96198497225B051B00B64BBA /* jsc_utils.c */,
+				96198499225B051B00B64BBA /* jsc_utils.h */,
+				96198496225B051B00B64BBA /* Replete-Bridging-Header.h */,
+				96198495225B051B00B64BBA /* ufile.c */,
+				9619849B225B051B00B64BBA /* ufile.h */,
 			);
-			path = "New Group";
+			path = Replete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

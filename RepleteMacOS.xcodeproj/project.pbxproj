@@ -112,6 +112,8 @@
 		96198453225B047200B64BBA = {
 			isa = PBXGroup;
 			children = (
+				9619845E225B047200B64BBA /* RepleteMacOS */,
+				961984AE225B59E100B64BBA /* New Group */,
 				9619848E225B051A00B64BBA /* bundle_inflate.h */,
 				96198493225B051B00B64BBA /* bundle.c */,
 				96198492225B051B00B64BBA /* bundle.h */,
@@ -130,7 +132,6 @@
 				96198496225B051B00B64BBA /* Replete-Bridging-Header.h */,
 				96198495225B051B00B64BBA /* ufile.c */,
 				9619849B225B051B00B64BBA /* ufile.h */,
-				9619845E225B047200B64BBA /* RepleteMacOS */,
 				96198471225B047300B64BBA /* RepleteMacOSTests */,
 				9619847C225B047300B64BBA /* RepleteMacOSUITests */,
 				9619845D225B047200B64BBA /* Products */,
@@ -188,6 +189,13 @@
 				961984A7225B055200B64BBA /* libcurl.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		961984AE225B59E100B64BBA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

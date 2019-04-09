@@ -65,11 +65,50 @@ class ViewController: NSViewController {
 extension ViewController {
 
     func loadMessage(_ incoming: Bool, text: String) {
+        guard let s = prepareMessageForDisplay(text) else { return }
+
         outputTextView?.append("\n")
-        outputTextView?.append(text)
+        outputTextView?.append(s)
         if let count = outputTextView?.textStorage?.length, count > 2 {
             outputTextView?.scrollRangeToVisible(NSRange(location: count - 1, length: 1))
         }
+    }
+
+    func prepareMessageForDisplay(_ text: String) -> NSMutableAttributedString? {
+        if (text != "\n") {
+            let s = NSMutableAttributedString(string:text);
+            while (markString(s)) {};
+            return s
+        }
+        return nil
+    }
+
+    func markString(_ s: NSMutableAttributedString) -> Bool {
+        if (s.string.contains("\u{001b}[")) {
+
+            let text = s.string;
+            let range : Range<String.Index> = text.range(of: "\u{001b}[")!;
+            let index: Int = text.distance(from: text.startIndex, to: range.lowerBound);
+            let index2 = text.index(text.startIndex, offsetBy: index + 2);
+            var color : NSColor = NSColor.black;
+            if (text[index2...].hasPrefix("34m")){
+                color = NSColor.blue;
+            } else if (text[index2...].hasPrefix("32m")){
+                color = NSColor(red: 0.0, green: 0.75, blue: 0.0, alpha: 1.0);
+            } else if (text[index2...].hasPrefix("35m")){
+                color = NSColor(red: 0.75, green: 0.0, blue: 0.75, alpha: 1.0);
+            } else if (text[index2...].hasPrefix("31m")){
+                color = NSColor(red: 1, green: 0.33, blue: 0.33, alpha: 1.0);
+            }
+
+            s.replaceCharacters(in: NSMakeRange(index, 5), with: "");
+            s.addAttribute(NSAttributedString.Key.foregroundColor,
+                           value: color,
+                           range: NSMakeRange(index, s.length-index));
+            return true;
+        }
+
+        return false;
     }
 
     @IBAction
@@ -96,6 +135,9 @@ extension ViewController: NSTextViewDelegate {
 //////////////
 
 extension NSTextView {
+    func append(_ text: NSAttributedString) {
+        textStorage?.append(text)
+    }
     func append(_ text: String) {
         textStorage?.append(NSAttributedString(string: text))
     }

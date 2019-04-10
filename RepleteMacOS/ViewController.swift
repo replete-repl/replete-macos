@@ -10,16 +10,31 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+//    override var representedObject: Any? {
+//        didSet {
+//            // Update the view, if already loaded.
+//        }
+//    }
+
     @IBOutlet var inputTextView: NSTextView?
     @IBOutlet var outputTextView: NSTextView?
+
+    var history: [NSRange] = []
+    var historyIndex: Int = -1 {
+        didSet {
+            let cnt = history.count - 1
+            if historyIndex > cnt { historyIndex = cnt }
+            if historyIndex < -1 { historyIndex = -1 }
+        }
+    }
 
     var ctx = CSContext()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure(textView: inputTextView)
+        configure(textView: outputTextView)
 
-        inputTextView?.font = NSFont(name: "Menlo", size: 12);
-        
         inputTextView?.delegate = self
         outputTextView?.delegate = self
 
@@ -31,12 +46,14 @@ class ViewController: NSViewController {
 
         DispatchQueue.main.async {
             let version = self.ctx.getClojureScriptVersion()
-            let masthead = "\nClojureScript \(version)\n" +
-                "    Docs: (doc function-name)\n" +
-                "          (find-doc \"part-of-name\")\n" +
-                "  Source: (source function-name)\n" +
-                " Results: Stored in *1, *2, *3,\n" +
-            "          an exception in *e\n";
+            let masthead = """
+            ClojureScript \(version)
+                Docs: (doc function-name)
+                      (find-doc \"part-of-name\")
+              Source: (source function-name)
+             Results: Stored in *1, *2, *3,
+                      an exception in *e
+            """
             self.loadMessage(false, text: masthead)
         };
 
@@ -57,22 +74,29 @@ class ViewController: NSViewController {
 
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    func configure(textView: NSTextView?) {
+        guard let textView = textView else { return }
+        textView.font = NSFont(name: "Menlo", size: 12);
+        textView.isAutomaticQuoteSubstitutionEnabled = false
+        textView.enabledTextCheckingTypes = 0
     }
+
 }
 
 extension ViewController {
 
     func loadMessage(_ incoming: Bool, text: String) {
-        guard let s = prepareMessageForDisplay(text) else { return }
+        guard let outputTextView = outputTextView,
+              !text.isEmpty, let s = prepareMessageForDisplay(text) else { return }
 
-        outputTextView?.append("\n")
-        outputTextView?.append(s)
-        if let count = outputTextView?.textStorage?.length, count > 2 {
-            outputTextView?.scrollRangeToVisible(NSRange(location: count - 1, length: 1))
+        if incoming { outputTextView.append("\n") }
+        if let rng = outputTextView.append(s) {
+            history.append(rng)
+            historyIndex = history.count - 1
+            outputTextView.setSelectedRange(NSRange(location: 0, length: 0))        }
+
+        if let count = outputTextView.textStorage?.length, count > 2 {
+            outputTextView.scrollRangeToVisible(NSRange(location: count - 1, length: 1))
         }
     }
 
@@ -81,7 +105,7 @@ extension ViewController {
             let s = NSMutableAttributedString(string:text);
             while (markString(s)) {};
             s.addAttribute(NSAttributedString.Key.font,
-                           value: NSFont(name: "Menlo", size: 12),
+                           value: NSFont(name: "Menlo", size: 12) as Any,
                            range: NSMakeRange(0, s.length));
             return s
         }
@@ -116,10 +140,38 @@ extension ViewController {
         return false;
     }
 
+    func refresh() {
+        // Highlight bg of currenty History block
+        // Update input w/ selected History block
+        guard let inputTextView = inputTextView, let outputTextView = outputTextView else { return }
+        if let rng = selectedHistoryRange, let ts = outputTextView.textStorage {
+            outputTextView.setSelectedRange(rng)
+            let str = ts.attributedSubstring(from: rng)
+            inputTextView.insertText(str, replacementRange: inputTextView.fullRange)
+        }
+    }
+
+    var selectedHistoryRange: NSRange? {
+        guard !history.isEmpty, historyIndex >= 0 else { return nil }
+        return history[historyIndex]
+    }
+
+    @IBAction
+    func moveBackInHistory(_ sender: Any?) {
+        historyIndex -= 1
+        refresh()
+    }
+
+    @IBAction
+    func moveForwardInHistory(_ sender: Any?) {
+        historyIndex += 1
+        refresh()
+    }
+
     @IBAction
     func evaluate (_ sender: Any) {
         guard let cmd = inputTextView?.string, !cmd.isEmpty else { return }
-        loadMessage(false, text: cmd)
+        loadMessage(true, text: cmd)
         ctx.evaluate(cmd)
     }
 }
@@ -140,10 +192,21 @@ extension ViewController: NSTextViewDelegate {
 //////////////
 
 extension NSTextView {
-    func append(_ text: NSAttributedString) {
-        textStorage?.append(text)
+
+    var fullRange: NSRange {
+        return NSRange(location: 0, length: textStorage?.length ?? 0)
     }
-    func append(_ text: String) {
-        textStorage?.append(NSAttributedString(string: text))
+
+    @discardableResult
+    func append(_ text: NSAttributedString) -> NSRange? {
+        guard let textStorage = textStorage else { return nil }
+        let pos = textStorage.length
+        textStorage.append(text)
+        return NSRange(location: pos, length: text.length)
+    }
+
+    @discardableResult
+    func append(_ text: String) -> NSRange? {
+        return append(NSAttributedString(string: text))
     }
 }

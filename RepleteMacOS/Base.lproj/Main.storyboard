@@ -607,9 +607,18 @@
                                             <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
-                                            <modifierMask key="keyEquivalentModifierMask" control="YES"/>
                                             <connections>
                                                 <action selector="evaluate:" target="Ady-hI-5gd" id="SHp-IZ-LTV"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Up in History" keyEquivalent="" id="tWy-QC-2J7">
+                                            <connections>
+                                                <action selector="moveBackInHistory:" target="Ady-hI-5gd" id="XuR-rg-5gJ"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Down in History" keyEquivalent="" id="Q1B-gX-axL">
+                                            <connections>
+                                                <action selector="moveForwardInHistory:" target="Ady-hI-5gd" id="u6a-Sz-Ws4"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -735,7 +744,7 @@ DQ
                                             <rect key="frame" x="0.0" y="0.0" width="480" height="201"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="1SM-gT-jga">
+                                                <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="1SM-gT-jga">
                                                     <rect key="frame" x="0.0" y="0.0" width="480" height="201"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -762,7 +771,7 @@ DQ
                                             <rect key="frame" x="0.0" y="0.0" width="480" height="59"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="D0n-fT-Ken">
+                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="D0n-fT-Ken">
                                                     <rect key="frame" x="0.0" y="0.0" width="480" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>

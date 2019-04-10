@@ -18,6 +18,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        inputTextView?.font = NSFont(name: "Menlo", size: 12);
+        
         inputTextView?.delegate = self
         outputTextView?.delegate = self
 
@@ -78,6 +80,9 @@ extension ViewController {
         if (text != "\n") {
             let s = NSMutableAttributedString(string:text);
             while (markString(s)) {};
+            s.addAttribute(NSAttributedString.Key.font,
+                           value: NSFont(name: "Menlo", size: 12),
+                           range: NSMakeRange(0, s.length));
             return s
         }
         return nil

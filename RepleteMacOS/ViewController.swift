@@ -10,33 +10,31 @@ import Cocoa
 
 class ViewController: NSViewController {
 
-//    override var representedObject: Any? {
-//        didSet {
-//            // Update the view, if already loaded.
-//        }
-//    }
-
     @IBOutlet var inputTextView: NSTextView?
     @IBOutlet var outputTextView: NSTextView?
 
     var history: [NSRange] = []
     var historyIndex: Int = -1 {
         didSet {
-            let cnt = history.count - 1
-            if historyIndex > cnt { historyIndex = cnt }
-            if historyIndex < -1 { historyIndex = -1 }
+//            let cnt = history.count - 1
+            if historyIndex >= history.count { historyIndex = history.count - 1 }
+            if historyIndex <= 0 { historyIndex = history.isEmpty ? -1 : 0 }
         }
     }
 
     var ctx = CSContext()
 
     override func viewDidLoad() {
+
         super.viewDidLoad()
         configure(textView: inputTextView)
         configure(textView: outputTextView)
 
         inputTextView?.delegate = self
         outputTextView?.delegate = self
+
+        let tap = NSClickGestureRecognizer(target: self, action: #selector(clicked(_:)))
+        outputTextView?.addGestureRecognizer(tap)
 
         ctx.setPrintCallback { (incoming: Bool, message: String!) -> Void in
             DispatchQueue.main.async {
@@ -53,6 +51,8 @@ class ViewController: NSViewController {
               Source: (source function-name)
              Results: Stored in *1, *2, *3,
                       an exception in *e
+            --------------------------------------
+
             """
             self.loadMessage(false, text: masthead)
         };
@@ -63,15 +63,20 @@ class ViewController: NSViewController {
             DispatchQueue.main.async {
                 // mark ready
                 NSLog("Ready");
-//                self.initialized = true;
-//                let hasText = self.textView.hasText
-//                self.evalButton.isEnabled = hasText
-//                if (hasText) {
-//                    self.runParinfer()
-//                }
             }
         }
 
+    }
+
+    @objc func clicked(_ sender: NSClickGestureRecognizer) {
+        if (sender.view as? NSTextView) == outputTextView {
+            let pt = sender.location(in: outputTextView)
+            guard let loc = outputTextView?.characterIndexForInsertion(at: pt) else { return }
+            if let h_ndx = history.firstIndex (where: { $0.contains(loc) }) {
+                historyIndex = h_ndx
+                refresh()
+            }
+        }
     }
 
     func configure(textView: NSTextView?) {
@@ -85,15 +90,18 @@ class ViewController: NSViewController {
 
 extension ViewController {
 
-    func loadMessage(_ incoming: Bool, text: String) {
+    func loadMessage(_ incoming: Bool, isInput: Bool = false, text: String) {
         guard let outputTextView = outputTextView,
               !text.isEmpty, let s = prepareMessageForDisplay(text) else { return }
 
-        if incoming { outputTextView.append("\n") }
         if let rng = outputTextView.append(s) {
-            history.append(rng)
-            historyIndex = history.count - 1
-            outputTextView.setSelectedRange(NSRange(location: 0, length: 0))        }
+            if isInput {
+                history.append(rng)
+                historyIndex = history.count - 1
+            }
+            outputTextView.setSelectedRange(NSRange(location: 0, length: 0))
+        }
+        if incoming { outputTextView.append("\n") }
 
         if let count = outputTextView.textStorage?.length, count > 2 {
             outputTextView.scrollRangeToVisible(NSRange(location: count - 1, length: 1))
@@ -171,7 +179,7 @@ extension ViewController {
     @IBAction
     func evaluate (_ sender: Any) {
         guard let cmd = inputTextView?.string, !cmd.isEmpty else { return }
-        loadMessage(true, text: cmd)
+        loadMessage(true, isInput: true, text: cmd)
         ctx.evaluate(cmd)
     }
 }

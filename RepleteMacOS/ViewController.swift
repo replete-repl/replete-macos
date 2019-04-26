@@ -126,7 +126,7 @@ extension ViewController {
             }
             s.addAttribute(NSAttributedString.Key.paragraphStyle,
                            value: paragraphStyle as Any,
-                           range: NSMakeRange(0, s.length));
+                           range: NSMakeRange(0, 1));
             
             // Make the color of input gray
             

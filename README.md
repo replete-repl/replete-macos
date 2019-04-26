@@ -14,7 +14,7 @@ Interested in Android instead? See [Replete for Android](https://github.com/repl
 
 1. Clone [planck](https://github.com/mfikes/planck) into a sibling directory and build it.
 1. In the `ClojureScript/replete` directory, do `script/build`
-1. `open RepleteMacOS.xcodeproj` with Xcode and run the app on your Mac.
+1. `open Replete.xcodeproj` with Xcode and run the app on your Mac.
 
 
 # Contributing

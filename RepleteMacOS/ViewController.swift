@@ -92,7 +92,7 @@ extension ViewController {
 
     func loadMessage(_ incoming: Bool, isInput: Bool = false, text: String) {
         guard let outputTextView = outputTextView,
-              !text.isEmpty, let s = prepareMessageForDisplay(text) else { return }
+            !text.isEmpty, let s = prepareMessageForDisplay(isInput, text: text) else { return }
 
         if let rng = outputTextView.append(s) {
             if isInput {
@@ -108,13 +108,34 @@ extension ViewController {
         }
     }
 
-    func prepareMessageForDisplay(_ text: String) -> NSMutableAttributedString? {
+    func prepareMessageForDisplay(_  isInput: Bool, text: String) -> NSMutableAttributedString? {
         if (text != "\n") {
             let s = NSMutableAttributedString(string:text);
             while (markString(s)) {};
             s.addAttribute(NSAttributedString.Key.font,
                            value: NSFont(name: "Menlo", size: 12) as Any,
                            range: NSMakeRange(0, s.length));
+            
+            // Spacing between input and output
+            
+            let paragraphStyle = NSMutableParagraphStyle()
+            if (isInput) {
+                paragraphStyle.paragraphSpacingBefore = 10.0
+            } else {
+                paragraphStyle.paragraphSpacingBefore = 5.0
+            }
+            s.addAttribute(NSAttributedString.Key.paragraphStyle,
+                           value: paragraphStyle as Any,
+                           range: NSMakeRange(0, s.length));
+            
+            // Make the color of input gray
+            
+            if (isInput) {
+                s.addAttribute(NSAttributedString.Key.foregroundColor,
+                               value: NSColor.gray as Any,
+                               range: NSMakeRange(0, s.length));
+            }
+            
             return s
         }
         return nil

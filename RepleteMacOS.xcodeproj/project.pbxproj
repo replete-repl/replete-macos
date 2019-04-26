@@ -44,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9619845C225B047200B64BBA /* RepleteMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepleteMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9619845C225B047200B64BBA /* Replete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Replete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9619845F225B047200B64BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96198461225B047200B64BBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		96198463225B047300B64BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		9619845D225B047200B64BBA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9619845C225B047200B64BBA /* RepleteMacOS.app */,
+				9619845C225B047200B64BBA /* Replete.app */,
 				9619846E225B047300B64BBA /* RepleteMacOSTests.xctest */,
 				96198479225B047300B64BBA /* RepleteMacOSUITests.xctest */,
 			);
@@ -215,7 +215,7 @@
 			);
 			name = RepleteMacOS;
 			productName = RepleteMacOS;
-			productReference = 9619845C225B047200B64BBA /* RepleteMacOS.app */;
+			productReference = 9619845C225B047200B64BBA /* Replete.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9619846D225B047300B64BBA /* RepleteMacOSTests */ = {
@@ -515,7 +515,7 @@
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Replete;
 				SWIFT_OBJC_BRIDGING_HEADER = "RepleteMacOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -537,7 +537,7 @@
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Replete;
 				SWIFT_OBJC_BRIDGING_HEADER = "RepleteMacOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};

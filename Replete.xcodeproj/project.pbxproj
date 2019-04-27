@@ -514,7 +514,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fikesfarm.Replete;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RepleteMacOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -536,7 +536,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fikesfarm.Replete;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RepleteMacOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

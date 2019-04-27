@@ -51,10 +51,9 @@ class ViewController: NSViewController {
               Source: (source function-name)
              Results: Stored in *1, *2, *3,
                       an exception in *e
-            --------------------------------------
 
             """
-            self.loadMessage(false, text: masthead)
+            self.loadMessage(false, isMasthead: true, text: masthead)
         };
 
         NSLog("Initializing...");
@@ -90,9 +89,10 @@ class ViewController: NSViewController {
 
 extension ViewController {
 
-    func loadMessage(_ incoming: Bool, isInput: Bool = false, text: String) {
+    func loadMessage(_ incoming: Bool, isInput: Bool = false, isMasthead: Bool = false, text: String) {
         guard let outputTextView = outputTextView,
-            !text.isEmpty, let s = prepareMessageForDisplay(isInput, text: text) else { return }
+            !text.isEmpty, let s = prepareMessageForDisplay(isInput, isMasthead: isMasthead, text: text)
+            else { return }
 
         if let rng = outputTextView.append(s) {
             if isInput {
@@ -108,7 +108,7 @@ extension ViewController {
         }
     }
 
-    func prepareMessageForDisplay(_  isInput: Bool, text: String) -> NSMutableAttributedString? {
+    func prepareMessageForDisplay(_  isInput: Bool, isMasthead: Bool, text: String) -> NSMutableAttributedString? {
         if (text != "\n") {
             let s = NSMutableAttributedString(string:text);
             while (markString(s)) {};
@@ -128,9 +128,9 @@ extension ViewController {
                            value: paragraphStyle as Any,
                            range: NSMakeRange(0, s.length));
             
-            // Make the color of input gray
+            // Make the color of input and masthead gray
             
-            if (isInput) {
+            if (isInput || isMasthead) {
                 s.addAttribute(NSAttributedString.Key.foregroundColor,
                                value: NSColor.gray as Any,
                                range: NSMakeRange(0, s.length));

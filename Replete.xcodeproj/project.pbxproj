@@ -7,99 +7,113 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96198460225B047200B64BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619845F225B047200B64BBA /* AppDelegate.swift */; };
-		96198462225B047200B64BBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96198461225B047200B64BBA /* ViewController.swift */; };
-		96198464225B047300B64BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96198463225B047300B64BBA /* Assets.xcassets */; };
-		96198467225B047300B64BBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96198465225B047300B64BBA /* Main.storyboard */; };
-		96198473225B047300B64BBA /* RepleteMacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96198472225B047300B64BBA /* RepleteMacOSTests.swift */; };
-		9619847E225B047300B64BBA /* RepleteMacOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619847D225B047300B64BBA /* RepleteMacOSUITests.swift */; };
-		9619849E225B051B00B64BBA /* CSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619848D225B051A00B64BBA /* CSContext.m */; };
-		9619849F225B051B00B64BBA /* functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 9619848F225B051A00B64BBA /* functions.c */; };
-		961984A0225B051B00B64BBA /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = 96198491225B051B00B64BBA /* file.c */; };
-		961984A1225B051C00B64BBA /* bundle.c in Sources */ = {isa = PBXBuildFile; fileRef = 96198493225B051B00B64BBA /* bundle.c */; };
-		961984A2225B051C00B64BBA /* ufile.c in Sources */ = {isa = PBXBuildFile; fileRef = 96198495225B051B00B64BBA /* ufile.c */; };
-		961984A3225B051C00B64BBA /* jsc_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 96198497225B051B00B64BBA /* jsc_utils.c */; };
-		961984A4225B051C00B64BBA /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 9619849C225B051B00B64BBA /* io.c */; };
-		961984A5225B051C00B64BBA /* http.c in Sources */ = {isa = PBXBuildFile; fileRef = 9619849D225B051B00B64BBA /* http.c */; };
-		961984A8225B055200B64BBA /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 961984A7225B055200B64BBA /* libcurl.tbd */; };
-		961984AA225B057600B64BBA /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 961984A9225B057600B64BBA /* libicucore.tbd */; };
-		961984AC225B059000B64BBA /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 961984AB225B059000B64BBA /* libiconv.tbd */; };
+		961984BC226562B300B64BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961984BB226562B300B64BBA /* AppDelegate.swift */; };
+		961984BE226562B300B64BBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961984BD226562B300B64BBA /* ViewController.swift */; };
+		961984C0226562B300B64BBA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961984BF226562B300B64BBA /* Document.swift */; };
+		961984C2226562B600B64BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 961984C1226562B600B64BBA /* Assets.xcassets */; };
+		961984C5226562B600B64BBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961984C3226562B600B64BBA /* Main.storyboard */; };
+		961984D1226562B600B64BBA /* RepleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961984D0226562B600B64BBA /* RepleteTests.swift */; };
+		961984DC226562B600B64BBA /* RepleteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961984DB226562B600B64BBA /* RepleteUITests.swift */; };
+		961984EB226564E900B64BBA /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 961984EA226564E900B64BBA /* libiconv.tbd */; };
+		961984ED226564F200B64BBA /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 961984EC226564F200B64BBA /* libcurl.tbd */; };
+		961984EF226564FF00B64BBA /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 961984EE226564FF00B64BBA /* libicucore.tbd */; };
+		9619850322656C5F00B64BBA /* ufile.c in Sources */ = {isa = PBXBuildFile; fileRef = 961984F222656C5F00B64BBA /* ufile.c */; };
+		9619850422656C5F00B64BBA /* CSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 961984F522656C5F00B64BBA /* CSContext.m */; };
+		9619850522656C5F00B64BBA /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = 961984F622656C5F00B64BBA /* file.c */; };
+		9619850622656C5F00B64BBA /* http.c in Sources */ = {isa = PBXBuildFile; fileRef = 961984FA22656C5F00B64BBA /* http.c */; };
+		9619850722656C5F00B64BBA /* jsc_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 961984FD22656C5F00B64BBA /* jsc_utils.c */; };
+		9619850822656C5F00B64BBA /* bundle.c in Sources */ = {isa = PBXBuildFile; fileRef = 9619850022656C5F00B64BBA /* bundle.c */; };
+		9619850922656C5F00B64BBA /* functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 9619850122656C5F00B64BBA /* functions.c */; };
+		9619850A22656C5F00B64BBA /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 9619850222656C5F00B64BBA /* io.c */; };
+		9619850D2265705300B64BBA /* Relay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619850C2265705300B64BBA /* Relay.swift */; };
+		9619850F2265770B00B64BBA /* NSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619850E2265770B00B64BBA /* NSExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9619846F225B047300B64BBA /* PBXContainerItemProxy */ = {
+		961984CD226562B600B64BBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 96198454225B047200B64BBA /* Project object */;
+			containerPortal = 961984B0226562B300B64BBA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9619845B225B047200B64BBA;
-			remoteInfo = RepleteMacOS;
+			remoteGlobalIDString = 961984B7226562B300B64BBA;
+			remoteInfo = Replete;
 		};
-		9619847A225B047300B64BBA /* PBXContainerItemProxy */ = {
+		961984D8226562B600B64BBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 96198454225B047200B64BBA /* Project object */;
+			containerPortal = 961984B0226562B300B64BBA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9619845B225B047200B64BBA;
-			remoteInfo = RepleteMacOS;
+			remoteGlobalIDString = 961984B7226562B300B64BBA;
+			remoteInfo = Replete;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9619845C225B047200B64BBA /* Replete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Replete.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9619845F225B047200B64BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96198461225B047200B64BBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		96198463225B047300B64BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		96198466225B047300B64BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		96198468225B047300B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96198469225B047300B64BBA /* RepleteMacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RepleteMacOS.entitlements; sourceTree = "<group>"; };
-		9619846E225B047300B64BBA /* RepleteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepleteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96198472225B047300B64BBA /* RepleteMacOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepleteMacOSTests.swift; sourceTree = "<group>"; };
-		96198474225B047300B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96198479225B047300B64BBA /* RepleteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepleteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9619847D225B047300B64BBA /* RepleteMacOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepleteMacOSUITests.swift; sourceTree = "<group>"; };
-		9619847F225B047300B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9619848B225B051A00B64BBA /* RepleteMacOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RepleteMacOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		9619848C225B051A00B64BBA /* CSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSContext.h; sourceTree = "<group>"; };
-		9619848D225B051A00B64BBA /* CSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSContext.m; sourceTree = "<group>"; };
-		9619848E225B051A00B64BBA /* bundle_inflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bundle_inflate.h; sourceTree = "<group>"; };
-		9619848F225B051A00B64BBA /* functions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = functions.c; sourceTree = "<group>"; };
-		96198490225B051A00B64BBA /* functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = functions.h; sourceTree = "<group>"; };
-		96198491225B051B00B64BBA /* file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = file.c; sourceTree = "<group>"; };
-		96198492225B051B00B64BBA /* bundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bundle.h; sourceTree = "<group>"; };
-		96198493225B051B00B64BBA /* bundle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bundle.c; sourceTree = "<group>"; };
-		96198494225B051B00B64BBA /* http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http.h; sourceTree = "<group>"; };
-		96198495225B051B00B64BBA /* ufile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ufile.c; sourceTree = "<group>"; };
-		96198496225B051B00B64BBA /* Replete-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Replete-Bridging-Header.h"; sourceTree = "<group>"; };
-		96198497225B051B00B64BBA /* jsc_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jsc_utils.c; sourceTree = "<group>"; };
-		96198498225B051B00B64BBA /* file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file.h; sourceTree = "<group>"; };
-		96198499225B051B00B64BBA /* jsc_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsc_utils.h; sourceTree = "<group>"; };
-		9619849A225B051B00B64BBA /* io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
-		9619849B225B051B00B64BBA /* ufile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ufile.h; sourceTree = "<group>"; };
-		9619849C225B051B00B64BBA /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
-		9619849D225B051B00B64BBA /* http.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = http.c; sourceTree = "<group>"; };
-		961984A7225B055200B64BBA /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
-		961984A9225B057600B64BBA /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
-		961984AB225B059000B64BBA /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		961984B8226562B300B64BBA /* Replete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Replete.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		961984BB226562B300B64BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		961984BD226562B300B64BBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		961984BF226562B300B64BBA /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		961984C1226562B600B64BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		961984C4226562B600B64BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		961984C6226562B600B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961984C7226562B600B64BBA /* Replete.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Replete.entitlements; sourceTree = "<group>"; };
+		961984CC226562B600B64BBA /* RepleteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepleteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		961984D0226562B600B64BBA /* RepleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepleteTests.swift; sourceTree = "<group>"; };
+		961984D2226562B600B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961984D7226562B600B64BBA /* RepleteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepleteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		961984DB226562B600B64BBA /* RepleteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepleteUITests.swift; sourceTree = "<group>"; };
+		961984DD226562B600B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961984EA226564E900B64BBA /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		961984EC226564F200B64BBA /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
+		961984EE226564FF00B64BBA /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		961984F122656C5E00B64BBA /* Replete-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Replete-Bridging-Header.h"; sourceTree = "<group>"; };
+		961984F222656C5F00B64BBA /* ufile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ufile.c; sourceTree = "<group>"; };
+		961984F322656C5F00B64BBA /* file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file.h; sourceTree = "<group>"; };
+		961984F422656C5F00B64BBA /* http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http.h; sourceTree = "<group>"; };
+		961984F522656C5F00B64BBA /* CSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSContext.m; sourceTree = "<group>"; };
+		961984F622656C5F00B64BBA /* file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = file.c; sourceTree = "<group>"; };
+		961984F722656C5F00B64BBA /* jsc_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsc_utils.h; sourceTree = "<group>"; };
+		961984F822656C5F00B64BBA /* functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = functions.h; sourceTree = "<group>"; };
+		961984FA22656C5F00B64BBA /* http.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = http.c; sourceTree = "<group>"; };
+		961984FB22656C5F00B64BBA /* io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
+		961984FC22656C5F00B64BBA /* bundle_inflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bundle_inflate.h; sourceTree = "<group>"; };
+		961984FD22656C5F00B64BBA /* jsc_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jsc_utils.c; sourceTree = "<group>"; };
+		961984FE22656C5F00B64BBA /* CSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSContext.h; sourceTree = "<group>"; };
+		961984FF22656C5F00B64BBA /* bundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bundle.h; sourceTree = "<group>"; };
+		9619850022656C5F00B64BBA /* bundle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bundle.c; sourceTree = "<group>"; };
+		9619850122656C5F00B64BBA /* functions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = functions.c; sourceTree = "<group>"; };
+		9619850222656C5F00B64BBA /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
+		9619850B22656D0200B64BBA /* ufile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ufile.h; sourceTree = "<group>"; };
+		9619850C2265705300B64BBA /* Relay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relay.swift; sourceTree = "<group>"; };
+		9619850E2265770B00B64BBA /* NSExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSExtensions.swift; sourceTree = "<group>"; };
+		961985142266CAEC00B64BBA /* RepleteHelp.help */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepleteHelp.help; sourceTree = BUILT_PRODUCTS_DIR; };
+		961985162266CAEC00B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		96198459225B047200B64BBA /* Frameworks */ = {
+		961984B5226562B300B64BBA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				961984AC225B059000B64BBA /* libiconv.tbd in Frameworks */,
-				961984AA225B057600B64BBA /* libicucore.tbd in Frameworks */,
-				961984A8225B055200B64BBA /* libcurl.tbd in Frameworks */,
+				961984EF226564FF00B64BBA /* libicucore.tbd in Frameworks */,
+				961984ED226564F200B64BBA /* libcurl.tbd in Frameworks */,
+				961984EB226564E900B64BBA /* libiconv.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9619846B225B047300B64BBA /* Frameworks */ = {
+		961984C9226562B600B64BBA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96198476225B047300B64BBA /* Frameworks */ = {
+		961984D4226562B600B64BBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		961985112266CAEC00B64BBA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -109,176 +123,214 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		96198453225B047200B64BBA = {
+		961984AF226562B300B64BBA = {
 			isa = PBXGroup;
 			children = (
-				9619845E225B047200B64BBA /* RepleteMacOS */,
-				961984AE225B59E100B64BBA /* Replete */,
-				96198471225B047300B64BBA /* RepleteMacOSTests */,
-				9619847C225B047300B64BBA /* RepleteMacOSUITests */,
-				9619845D225B047200B64BBA /* Products */,
-				9619848B225B051A00B64BBA /* RepleteMacOS-Bridging-Header.h */,
-				961984A6225B055100B64BBA /* Frameworks */,
+				961984F022656C3600B64BBA /* CSContext */,
+				961984BA226562B300B64BBA /* Replete */,
+				961984CF226562B600B64BBA /* RepleteTests */,
+				961984DA226562B600B64BBA /* RepleteUITests */,
+				961985152266CAEC00B64BBA /* RepleteHelp */,
+				961984B9226562B300B64BBA /* Products */,
+				961984E9226564E900B64BBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		9619845D225B047200B64BBA /* Products */ = {
+		961984B9226562B300B64BBA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9619845C225B047200B64BBA /* Replete.app */,
-				9619846E225B047300B64BBA /* RepleteTests.xctest */,
-				96198479225B047300B64BBA /* RepleteUITests.xctest */,
+				961984B8226562B300B64BBA /* Replete.app */,
+				961984CC226562B600B64BBA /* RepleteTests.xctest */,
+				961984D7226562B600B64BBA /* RepleteUITests.xctest */,
+				961985142266CAEC00B64BBA /* RepleteHelp.help */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9619845E225B047200B64BBA /* RepleteMacOS */ = {
+		961984BA226562B300B64BBA /* Replete */ = {
 			isa = PBXGroup;
 			children = (
-				9619845F225B047200B64BBA /* AppDelegate.swift */,
-				96198461225B047200B64BBA /* ViewController.swift */,
-				96198463225B047300B64BBA /* Assets.xcassets */,
-				96198465225B047300B64BBA /* Main.storyboard */,
-				96198468225B047300B64BBA /* Info.plist */,
-				96198469225B047300B64BBA /* RepleteMacOS.entitlements */,
+				961984BB226562B300B64BBA /* AppDelegate.swift */,
+				961984BD226562B300B64BBA /* ViewController.swift */,
+				961984BF226562B300B64BBA /* Document.swift */,
+				961984C1226562B600B64BBA /* Assets.xcassets */,
+				961984C3226562B600B64BBA /* Main.storyboard */,
+				961984C6226562B600B64BBA /* Info.plist */,
+				961984C7226562B600B64BBA /* Replete.entitlements */,
+				9619850C2265705300B64BBA /* Relay.swift */,
+				9619850E2265770B00B64BBA /* NSExtensions.swift */,
 			);
-			path = RepleteMacOS;
+			path = Replete;
 			sourceTree = "<group>";
 		};
-		96198471225B047300B64BBA /* RepleteMacOSTests */ = {
+		961984CF226562B600B64BBA /* RepleteTests */ = {
 			isa = PBXGroup;
 			children = (
-				96198472225B047300B64BBA /* RepleteMacOSTests.swift */,
-				96198474225B047300B64BBA /* Info.plist */,
+				961984D0226562B600B64BBA /* RepleteTests.swift */,
+				961984D2226562B600B64BBA /* Info.plist */,
 			);
-			path = RepleteMacOSTests;
+			path = RepleteTests;
 			sourceTree = "<group>";
 		};
-		9619847C225B047300B64BBA /* RepleteMacOSUITests */ = {
+		961984DA226562B600B64BBA /* RepleteUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9619847D225B047300B64BBA /* RepleteMacOSUITests.swift */,
-				9619847F225B047300B64BBA /* Info.plist */,
+				961984DB226562B600B64BBA /* RepleteUITests.swift */,
+				961984DD226562B600B64BBA /* Info.plist */,
 			);
-			path = RepleteMacOSUITests;
+			path = RepleteUITests;
 			sourceTree = "<group>";
 		};
-		961984A6225B055100B64BBA /* Frameworks */ = {
+		961984E9226564E900B64BBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				961984AB225B059000B64BBA /* libiconv.tbd */,
-				961984A9225B057600B64BBA /* libicucore.tbd */,
-				961984A7225B055200B64BBA /* libcurl.tbd */,
+				961984EE226564FF00B64BBA /* libicucore.tbd */,
+				961984EC226564F200B64BBA /* libcurl.tbd */,
+				961984EA226564E900B64BBA /* libiconv.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		961984AE225B59E100B64BBA /* Replete */ = {
+		961984F022656C3600B64BBA /* CSContext */ = {
 			isa = PBXGroup;
 			children = (
-				9619848C225B051A00B64BBA /* CSContext.h */,
-				9619848D225B051A00B64BBA /* CSContext.m */,
-				9619848E225B051A00B64BBA /* bundle_inflate.h */,
-				96198493225B051B00B64BBA /* bundle.c */,
-				96198492225B051B00B64BBA /* bundle.h */,
-				96198491225B051B00B64BBA /* file.c */,
-				96198498225B051B00B64BBA /* file.h */,
-				9619848F225B051A00B64BBA /* functions.c */,
-				96198490225B051A00B64BBA /* functions.h */,
-				9619849D225B051B00B64BBA /* http.c */,
-				96198494225B051B00B64BBA /* http.h */,
-				9619849C225B051B00B64BBA /* io.c */,
-				9619849A225B051B00B64BBA /* io.h */,
-				96198497225B051B00B64BBA /* jsc_utils.c */,
-				96198499225B051B00B64BBA /* jsc_utils.h */,
-				96198496225B051B00B64BBA /* Replete-Bridging-Header.h */,
-				96198495225B051B00B64BBA /* ufile.c */,
-				9619849B225B051B00B64BBA /* ufile.h */,
+				961984FC22656C5F00B64BBA /* bundle_inflate.h */,
+				9619850022656C5F00B64BBA /* bundle.c */,
+				961984FF22656C5F00B64BBA /* bundle.h */,
+				961984FE22656C5F00B64BBA /* CSContext.h */,
+				961984F522656C5F00B64BBA /* CSContext.m */,
+				961984F622656C5F00B64BBA /* file.c */,
+				961984F322656C5F00B64BBA /* file.h */,
+				9619850122656C5F00B64BBA /* functions.c */,
+				961984F822656C5F00B64BBA /* functions.h */,
+				961984FA22656C5F00B64BBA /* http.c */,
+				961984F422656C5F00B64BBA /* http.h */,
+				9619850222656C5F00B64BBA /* io.c */,
+				961984FB22656C5F00B64BBA /* io.h */,
+				961984FD22656C5F00B64BBA /* jsc_utils.c */,
+				961984F722656C5F00B64BBA /* jsc_utils.h */,
+				9619850B22656D0200B64BBA /* ufile.h */,
+				961984F222656C5F00B64BBA /* ufile.c */,
+				961984F122656C5E00B64BBA /* Replete-Bridging-Header.h */,
 			);
-			path = Replete;
+			path = CSContext;
+			sourceTree = "<group>";
+		};
+		961985152266CAEC00B64BBA /* RepleteHelp */ = {
+			isa = PBXGroup;
+			children = (
+				961985162266CAEC00B64BBA /* Info.plist */,
+			);
+			path = RepleteHelp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9619845B225B047200B64BBA /* Replete */ = {
+		961984B7226562B300B64BBA /* Replete */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96198482225B047300B64BBA /* Build configuration list for PBXNativeTarget "Replete" */;
+			buildConfigurationList = 961984E0226562B600B64BBA /* Build configuration list for PBXNativeTarget "Replete" */;
 			buildPhases = (
-				96198458225B047200B64BBA /* Sources */,
-				96198459225B047200B64BBA /* Frameworks */,
-				9619845A225B047200B64BBA /* Resources */,
+				961984B4226562B300B64BBA /* Sources */,
+				961984B5226562B300B64BBA /* Frameworks */,
+				961984B6226562B300B64BBA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Replete;
-			productName = RepleteMacOS;
-			productReference = 9619845C225B047200B64BBA /* Replete.app */;
+			productName = Replete;
+			productReference = 961984B8226562B300B64BBA /* Replete.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9619846D225B047300B64BBA /* RepleteTests */ = {
+		961984CB226562B600B64BBA /* RepleteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96198485225B047300B64BBA /* Build configuration list for PBXNativeTarget "RepleteTests" */;
+			buildConfigurationList = 961984E3226562B600B64BBA /* Build configuration list for PBXNativeTarget "RepleteTests" */;
 			buildPhases = (
-				9619846A225B047300B64BBA /* Sources */,
-				9619846B225B047300B64BBA /* Frameworks */,
-				9619846C225B047300B64BBA /* Resources */,
+				961984C8226562B600B64BBA /* Sources */,
+				961984C9226562B600B64BBA /* Frameworks */,
+				961984CA226562B600B64BBA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				96198470225B047300B64BBA /* PBXTargetDependency */,
+				961984CE226562B600B64BBA /* PBXTargetDependency */,
 			);
 			name = RepleteTests;
-			productName = RepleteMacOSTests;
-			productReference = 9619846E225B047300B64BBA /* RepleteTests.xctest */;
+			productName = RepleteTests;
+			productReference = 961984CC226562B600B64BBA /* RepleteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		96198478225B047300B64BBA /* RepleteUITests */ = {
+		961984D6226562B600B64BBA /* RepleteUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96198488225B047300B64BBA /* Build configuration list for PBXNativeTarget "RepleteUITests" */;
+			buildConfigurationList = 961984E6226562B600B64BBA /* Build configuration list for PBXNativeTarget "RepleteUITests" */;
 			buildPhases = (
-				96198475225B047300B64BBA /* Sources */,
-				96198476225B047300B64BBA /* Frameworks */,
-				96198477225B047300B64BBA /* Resources */,
+				961984D3226562B600B64BBA /* Sources */,
+				961984D4226562B600B64BBA /* Frameworks */,
+				961984D5226562B600B64BBA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9619847B225B047300B64BBA /* PBXTargetDependency */,
+				961984D9226562B600B64BBA /* PBXTargetDependency */,
 			);
 			name = RepleteUITests;
-			productName = RepleteMacOSUITests;
-			productReference = 96198479225B047300B64BBA /* RepleteUITests.xctest */;
+			productName = RepleteUITests;
+			productReference = 961984D7226562B600B64BBA /* RepleteUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		961985132266CAEC00B64BBA /* RepleteHelp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 961985172266CAEC00B64BBA /* Build configuration list for PBXNativeTarget "RepleteHelp" */;
+			buildPhases = (
+				961985102266CAEC00B64BBA /* Sources */,
+				961985112266CAEC00B64BBA /* Frameworks */,
+				961985122266CAEC00B64BBA /* Resources */,
+				9619851A2266CB0E00B64BBA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RepleteHelp;
+			productName = RepleteHelp;
+			productReference = 961985142266CAEC00B64BBA /* RepleteHelp.help */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		96198454225B047200B64BBA /* Project object */ = {
+		961984B0226562B300B64BBA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Jason Jobe";
 				TargetAttributes = {
-					9619845B225B047200B64BBA = {
+					961984B7226562B300B64BBA = {
 						CreatedOnToolsVersion = 10.2;
 						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
-					9619846D225B047300B64BBA = {
+					961984CB226562B600B64BBA = {
 						CreatedOnToolsVersion = 10.2;
-						TestTargetID = 9619845B225B047200B64BBA;
+						TestTargetID = 961984B7226562B300B64BBA;
 					};
-					96198478225B047300B64BBA = {
+					961984D6226562B600B64BBA = {
 						CreatedOnToolsVersion = 10.2;
-						TestTargetID = 9619845B225B047200B64BBA;
+						TestTargetID = 961984B7226562B300B64BBA;
+					};
+					961985132266CAEC00B64BBA = {
+						CreatedOnToolsVersion = 10.2;
 					};
 				};
 			};
-			buildConfigurationList = 96198457225B047200B64BBA /* Build configuration list for PBXProject "Replete" */;
+			buildConfigurationList = 961984B3226562B300B64BBA /* Build configuration list for PBXProject "Replete" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -286,36 +338,44 @@
 				en,
 				Base,
 			);
-			mainGroup = 96198453225B047200B64BBA;
-			productRefGroup = 9619845D225B047200B64BBA /* Products */;
+			mainGroup = 961984AF226562B300B64BBA;
+			productRefGroup = 961984B9226562B300B64BBA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9619845B225B047200B64BBA /* Replete */,
-				9619846D225B047300B64BBA /* RepleteTests */,
-				96198478225B047300B64BBA /* RepleteUITests */,
+				961984B7226562B300B64BBA /* Replete */,
+				961984CB226562B600B64BBA /* RepleteTests */,
+				961984D6226562B600B64BBA /* RepleteUITests */,
+				961985132266CAEC00B64BBA /* RepleteHelp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9619845A225B047200B64BBA /* Resources */ = {
+		961984B6226562B300B64BBA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96198464225B047300B64BBA /* Assets.xcassets in Resources */,
-				96198467225B047300B64BBA /* Main.storyboard in Resources */,
+				961984C2226562B600B64BBA /* Assets.xcassets in Resources */,
+				961984C5226562B600B64BBA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9619846C225B047300B64BBA /* Resources */ = {
+		961984CA226562B600B64BBA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96198477225B047300B64BBA /* Resources */ = {
+		961984D5226562B600B64BBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		961985122266CAEC00B64BBA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,60 +384,90 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9619851A2266CB0E00B64BBA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/make -C \"$(dirname \"$PRODUCT_SETTINGS_PATH\")\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		96198458225B047200B64BBA /* Sources */ = {
+		961984B4226562B300B64BBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				961984A0225B051B00B64BBA /* file.c in Sources */,
-				961984A2225B051C00B64BBA /* ufile.c in Sources */,
-				9619849E225B051B00B64BBA /* CSContext.m in Sources */,
-				9619849F225B051B00B64BBA /* functions.c in Sources */,
-				961984A3225B051C00B64BBA /* jsc_utils.c in Sources */,
-				961984A5225B051C00B64BBA /* http.c in Sources */,
-				961984A1225B051C00B64BBA /* bundle.c in Sources */,
-				96198462225B047200B64BBA /* ViewController.swift in Sources */,
-				961984A4225B051C00B64BBA /* io.c in Sources */,
-				96198460225B047200B64BBA /* AppDelegate.swift in Sources */,
+				9619850822656C5F00B64BBA /* bundle.c in Sources */,
+				961984BE226562B300B64BBA /* ViewController.swift in Sources */,
+				9619850322656C5F00B64BBA /* ufile.c in Sources */,
+				9619850422656C5F00B64BBA /* CSContext.m in Sources */,
+				9619850A22656C5F00B64BBA /* io.c in Sources */,
+				961984BC226562B300B64BBA /* AppDelegate.swift in Sources */,
+				9619850722656C5F00B64BBA /* jsc_utils.c in Sources */,
+				9619850F2265770B00B64BBA /* NSExtensions.swift in Sources */,
+				9619850D2265705300B64BBA /* Relay.swift in Sources */,
+				9619850622656C5F00B64BBA /* http.c in Sources */,
+				9619850922656C5F00B64BBA /* functions.c in Sources */,
+				961984C0226562B300B64BBA /* Document.swift in Sources */,
+				9619850522656C5F00B64BBA /* file.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9619846A225B047300B64BBA /* Sources */ = {
+		961984C8226562B600B64BBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96198473225B047300B64BBA /* RepleteMacOSTests.swift in Sources */,
+				961984D1226562B600B64BBA /* RepleteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96198475225B047300B64BBA /* Sources */ = {
+		961984D3226562B600B64BBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9619847E225B047300B64BBA /* RepleteMacOSUITests.swift in Sources */,
+				961984DC226562B600B64BBA /* RepleteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		961985102266CAEC00B64BBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		96198470225B047300B64BBA /* PBXTargetDependency */ = {
+		961984CE226562B600B64BBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9619845B225B047200B64BBA /* Replete */;
-			targetProxy = 9619846F225B047300B64BBA /* PBXContainerItemProxy */;
+			target = 961984B7226562B300B64BBA /* Replete */;
+			targetProxy = 961984CD226562B600B64BBA /* PBXContainerItemProxy */;
 		};
-		9619847B225B047300B64BBA /* PBXTargetDependency */ = {
+		961984D9226562B600B64BBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9619845B225B047200B64BBA /* Replete */;
-			targetProxy = 9619847A225B047300B64BBA /* PBXContainerItemProxy */;
+			target = 961984B7226562B300B64BBA /* Replete */;
+			targetProxy = 961984D8226562B600B64BBA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		96198465225B047300B64BBA /* Main.storyboard */ = {
+		961984C3226562B600B64BBA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				96198466225B047300B64BBA /* Base */,
+				961984C4226562B600B64BBA /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -385,7 +475,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		96198480225B047300B64BBA /* Debug */ = {
+		961984DE226562B600B64BBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -446,7 +536,7 @@
 			};
 			name = Debug;
 		};
-		96198481225B047300B64BBA /* Release */ = {
+		961984DF226562B600B64BBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -500,50 +590,50 @@
 			};
 			name = Release;
 		};
-		96198483225B047300B64BBA /* Debug */ = {
+		961984E1226562B600B64BBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = RepleteMacOS/RepleteMacOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Replete/Replete.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
-				INFOPLIST_FILE = RepleteMacOS/Info.plist;
+				INFOPLIST_FILE = Replete/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fikesfarm.Replete;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.Replete;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "RepleteMacOS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "CSContext/Replete-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		96198484225B047300B64BBA /* Release */ = {
+		961984E2226562B600B64BBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = RepleteMacOS/RepleteMacOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Replete/Replete.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
-				INFOPLIST_FILE = RepleteMacOS/Info.plist;
+				INFOPLIST_FILE = Replete/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fikesfarm.Replete;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.Replete;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "RepleteMacOS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "CSContext/Replete-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		96198486225B047300B64BBA /* Debug */ = {
+		961984E4226562B600B64BBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -551,20 +641,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
-				INFOPLIST_FILE = RepleteMacOSTests/Info.plist;
+				INFOPLIST_FILE = RepleteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOSTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Replete.app/Contents/MacOS/Replete";
 			};
 			name = Debug;
 		};
-		96198487225B047300B64BBA /* Release */ = {
+		961984E5226562B600B64BBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -572,99 +662,138 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
-				INFOPLIST_FILE = RepleteMacOSTests/Info.plist;
+				INFOPLIST_FILE = RepleteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOSTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Replete.app/Contents/MacOS/Replete";
 			};
 			name = Release;
 		};
-		96198489225B047300B64BBA /* Debug */ = {
+		961984E7226562B600B64BBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
-				INFOPLIST_FILE = RepleteMacOSUITests/Info.plist;
+				INFOPLIST_FILE = RepleteUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOSUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = RepleteMacOS;
+				TEST_TARGET_NAME = Replete;
 			};
 			name = Debug;
 		};
-		9619848A225B047300B64BBA /* Release */ = {
+		961984E8226562B600B64BBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
-				INFOPLIST_FILE = RepleteMacOSUITests/Info.plist;
+				INFOPLIST_FILE = RepleteUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteMacOSUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = RepleteMacOS;
+				TEST_TARGET_NAME = Replete;
+			};
+			name = Release;
+		};
+		961985182266CAEC00B64BBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
+				INFOPLIST_FILE = RepleteHelp/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wildthink.osx.-.RepleteHelp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = help;
+			};
+			name = Debug;
+		};
+		961985192266CAEC00B64BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
+				INFOPLIST_FILE = RepleteHelp/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wildthink.osx.-.RepleteHelp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = help;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		96198457225B047200B64BBA /* Build configuration list for PBXProject "Replete" */ = {
+		961984B3226562B300B64BBA /* Build configuration list for PBXProject "Replete" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96198480225B047300B64BBA /* Debug */,
-				96198481225B047300B64BBA /* Release */,
+				961984DE226562B600B64BBA /* Debug */,
+				961984DF226562B600B64BBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96198482225B047300B64BBA /* Build configuration list for PBXNativeTarget "Replete" */ = {
+		961984E0226562B600B64BBA /* Build configuration list for PBXNativeTarget "Replete" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96198483225B047300B64BBA /* Debug */,
-				96198484225B047300B64BBA /* Release */,
+				961984E1226562B600B64BBA /* Debug */,
+				961984E2226562B600B64BBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96198485225B047300B64BBA /* Build configuration list for PBXNativeTarget "RepleteTests" */ = {
+		961984E3226562B600B64BBA /* Build configuration list for PBXNativeTarget "RepleteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96198486225B047300B64BBA /* Debug */,
-				96198487225B047300B64BBA /* Release */,
+				961984E4226562B600B64BBA /* Debug */,
+				961984E5226562B600B64BBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96198488225B047300B64BBA /* Build configuration list for PBXNativeTarget "RepleteUITests" */ = {
+		961984E6226562B600B64BBA /* Build configuration list for PBXNativeTarget "RepleteUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96198489225B047300B64BBA /* Debug */,
-				9619848A225B047300B64BBA /* Release */,
+				961984E7226562B600B64BBA /* Debug */,
+				961984E8226562B600B64BBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		961985172266CAEC00B64BBA /* Build configuration list for PBXNativeTarget "RepleteHelp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				961985182266CAEC00B64BBA /* Debug */,
+				961985192266CAEC00B64BBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 96198454225B047200B64BBA /* Project object */;
+	rootObject = 961984B0226562B300B64BBA /* Project object */;
 }

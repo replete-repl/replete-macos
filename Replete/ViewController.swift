@@ -132,7 +132,7 @@ extension ViewController {
             
             if (isInput || isMasthead) {
                 s.addAttribute(NSAttributedString.Key.foregroundColor,
-                               value: NSColor.gray as Any,
+                               value: NSColor.darkGray as Any,
                                range: NSMakeRange(0, s.length));
             }
             

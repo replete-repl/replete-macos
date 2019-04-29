@@ -131,9 +131,9 @@ int main(int argc, char **argv) {
 #endif
 EOF
 rm bundle_dict.c
-mv bundle.c ../../Replete/bundle.c
+mv bundle.c ../../CSContext/bundle.c
 # We don't want git to suggest we commit this generated
 # output, so we suppress it here.
 if [ -d ../../.git ]; then
-  git update-index --assume-unchanged ../../Replete/bundle.c
+  git update-index --assume-unchanged ../../CSContext/bundle.c
 fi;

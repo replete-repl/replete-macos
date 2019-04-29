@@ -18,6 +18,7 @@
 #include "bundle.h"
 
 #include <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 #import "CSContext.h"
 
 @interface CSContext ()
@@ -695,8 +696,17 @@ void bootstrap(JSContextRef ctx) {
         NSString* message = @"ClojureScript macros must be defined in a separate namespace and required appropriately."
         "\n\nFor didactic purposes, we can support defining macros directly in the Replete REPL. "
         "\n\nAny helper functions called during macroexpansion must be defined using defmacfn in lieu of defn.";
-
-        [self confirmWithTitle:@"Enable REPL\nMacro Definitions?" message: message handler:^(BOOL flag) {
+        
+        NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+        paraStyle.alignment = NSTextAlignmentLeft;
+        
+        NSMutableAttributedString *atrStr = [[NSMutableAttributedString alloc] initWithString:message attributes:@{NSParagraphStyleAttributeName:paraStyle,NSFontAttributeName:[NSFont systemFontOfSize:14.0]}];
+        
+        [atrStr addAttribute:NSFontAttributeName value:[NSFont boldSystemFontOfSize:14] range:[message rangeOfString:@"during"]];
+        [atrStr addAttribute:NSFontAttributeName value:[NSFont fontWithName:@"Menlo" size:14] range:[message rangeOfString:@"defmacfn"]];
+        [atrStr addAttribute:NSFontAttributeName value:[NSFont fontWithName:@"Menlo" size:14] range:[message rangeOfString:@"defn"]];
+        
+        [self confirmWithTitle:@"Enable REPL\nMacro Definitions?" message: atrStr handler:^(BOOL flag) {
             if (!flag) return;
 
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
@@ -707,28 +717,26 @@ void bootstrap(JSContextRef ctx) {
                 [self.readEvalPrintFn callWithArguments:@[text, @true]];
             });
         }];
-
-
-//        NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
-//        paraStyle.alignment = NSTextAlignmentLeft;
-//
-//        NSMutableAttributedString *atrStr = [[NSMutableAttributedString alloc] initWithString:message attributes:@{NSParagraphStyleAttributeName:paraStyle,NSFontAttributeName:[UIFont systemFontOfSize:14.0]}];
-//
-//        [atrStr addAttribute:NSFontAttributeName value:[UIFont italicSystemFontOfSize:14] range:[message rangeOfString:@"during"]];
-//        [atrStr addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Menlo" size:14] range:[message rangeOfString:@"defmacfn"]];
-//        [atrStr addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Menlo" size:14] range:[message rangeOfString:@"defn"]];
-//
-//        [alert setValue:atrStr forKey:@"attributedMessage"];
-
-            // Left justify text
+        
     }
 }
 
-- (void)confirmWithTitle:(NSString*)title message:(NSString*)msg handler:(void(^)(BOOL))block
+- (void)confirmWithTitle:(NSString*)title message:(id)msg handler:(void(^)(BOOL))block
 {
-    NSLog(@"Alert %@\n%@", title, msg);
-#warning(Need a real alert)
-    block(true);
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:title];
+    
+    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:@"Cancel"];
+    
+    NSTextView *accessory = [[NSTextView alloc] initWithFrame:NSMakeRect(0,0,200,15)];
+    [accessory insertText:msg];
+    [accessory setEditable:NO];
+    [accessory setDrawsBackground:NO];
+    alert.accessoryView = accessory;
+    
+    NSModalResponse response = [alert runModal];
+    block(response == NSAlertFirstButtonReturn);
 }
 
 -(void)evaluate:(NSString*)text asExpression:(BOOL)expression

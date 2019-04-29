@@ -204,6 +204,7 @@ extension ViewController {
               !cmd.isEmpty else { return }
         loadMessage(true, isInput: true, text: cmd)
         ctx.evaluate(cmd)
+        inputTextView?.string = "";
     }
 }
 

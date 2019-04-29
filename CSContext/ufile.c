@@ -66,7 +66,7 @@ file2wcs (int fd, iconv_t cd, uint16_t *outbuf, size_t avail)
     if (avail >= sizeof (wchar_t))
         *((uint16_t *) wrptr) = L'\0';
     
-    return (uint16_t *) wrptr - outbuf;
+    return (int)((uint16_t *) wrptr - outbuf); // jmj down cast
 }
 
 UFILE* u_fopen(const char *filename, const char *perm, const char *locale, const char *codepage) {

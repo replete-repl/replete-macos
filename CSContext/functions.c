@@ -30,7 +30,7 @@ void set_root_directory(const char* path) {
 }
 
 static char sandbox_path_buffer[FILENAME_MAX];
-static char unsandbox_path_buffer[FILENAME_MAX];
+//static char unsandbox_path_buffer[FILENAME_MAX];
 
 const char* sandbox(const char* path) {
     sprintf((char*)sandbox_path_buffer, "%s%s", root_directory, path);

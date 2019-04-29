@@ -39,7 +39,7 @@ size_t header_to_object_callback(char *buffer, size_t size, size_t nitems, void 
     
     // printf("'%s'\n", buffer);
     
-    int key_end = -1;
+    size_t key_end = -1;
     size_t val_end = size * nitems;
     size_t i;
     for (i = 0; i < size * nitems; i++) {
@@ -61,7 +61,7 @@ size_t header_to_object_callback(char *buffer, size_t size, size_t nitems, void 
     
     JSStringRef key_str = JSStringCreateWithUTF8CString(key);
     
-    int val_start = key_end + 1;
+    size_t val_start = key_end + 1;
     
     // Trim whitespace from beginning of val
     for (i = val_start; i < val_end; i++) {

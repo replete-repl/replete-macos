@@ -84,7 +84,7 @@ void write_contents(char *path, char *contents) {
     size_t len = strlen(contents);
     int offset = 0;
     do {
-        int res = fwrite(contents + offset, 1, len - offset, f);
+        size_t res = fwrite(contents + offset, 1, len - offset, f);
         if (res < 0) {
             return;
         }
@@ -158,7 +158,7 @@ int copy_file_loop(const char *from, const char *to) {
     if (fd_to < 0)
         goto out_error;
     
-    while (nread = read(fd_from, buf, sizeof buf), nread > 0) {
+    while ((void)(nread = read(fd_from, buf, sizeof buf)), nread > 0) {
         char *out_ptr = buf;
         ssize_t nwritten;
         

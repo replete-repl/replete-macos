@@ -175,6 +175,7 @@ extension ViewController {
         guard let inputTextView = inputTextView, let outputTextView = outputTextView else { return }
         if let rng = selectedHistoryRange, let ts = outputTextView.textStorage {
             outputTextView.setSelectedRange(rng)
+            outputTextView.scrollRangeToVisible(rng)
             let str = ts.attributedSubstring(from: rng)
             inputTextView.insertText(str, replacementRange: inputTextView.fullRange)
         }
@@ -199,7 +200,8 @@ extension ViewController {
 
     @IBAction
     func evaluate (_ sender: Any) {
-        guard let cmd = inputTextView?.string, !cmd.isEmpty else { return }
+        guard let cmd = inputTextView?.string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines),
+              !cmd.isEmpty else { return }
         loadMessage(true, isInput: true, text: cmd)
         ctx.evaluate(cmd)
     }
@@ -215,27 +217,5 @@ extension ViewController: NSTextViewDelegate {
         default:
             return false
         }
-    }
-}
-
-//////////////
-
-extension NSTextView {
-
-    var fullRange: NSRange {
-        return NSRange(location: 0, length: textStorage?.length ?? 0)
-    }
-
-    @discardableResult
-    func append(_ text: NSAttributedString) -> NSRange? {
-        guard let textStorage = textStorage else { return nil }
-        let pos = textStorage.length
-        textStorage.append(text)
-        return NSRange(location: pos, length: text.length)
-    }
-
-    @discardableResult
-    func append(_ text: String) -> NSRange? {
-        return append(NSAttributedString(string: text))
     }
 }

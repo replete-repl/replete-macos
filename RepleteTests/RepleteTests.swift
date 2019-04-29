@@ -1,15 +1,15 @@
 //
-//  RepleteMacOSTests.swift
-//  RepleteMacOSTests
+//  RepleteTests.swift
+//  RepleteTests
 //
-//  Created by Jason Jobe on 4/8/19.
+//  Created by Jason Jobe on 4/15/19.
 //  Copyright © 2019 Jason Jobe. All rights reserved.
 //
 
 import XCTest
-@testable import RepleteMacOS
+@testable import Replete
 
-class RepleteMacOSTests: XCTestCase {
+class RepleteTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

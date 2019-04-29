@@ -22,6 +22,7 @@
 
 @interface CSContext ()
 
+@property (assign, nonatomic) JSGlobalContextRef ctx; // jmj
 @property (assign, nonatomic) JSContext* context;
 @property (strong, nonatomic) JSValue* readEvalPrintFn;
 @property (strong, nonatomic) JSValue* chivorcamReferred;
@@ -101,7 +102,7 @@ void add_loaded_hash(unsigned long h) {
     }
 }
 
-JSGlobalContextRef ctx = NULL;
+//JSGlobalContextRef _ctx = NULL; // jmj
 
 JSValueRef function_import_script(JSContextRef ctx, JSObjectRef function, JSObjectRef thisObject,
                                   size_t argc, const JSValueRef args[], JSValueRef *exception) {
@@ -117,13 +118,14 @@ JSValueRef function_import_script(JSContextRef ctx, JSObjectRef function, JSObje
         char *path = tmp;
         if (str_has_prefix(path, "goog/../") == 0) {
             path = path + 8;
-        } else {
-            unsigned long h = hash((unsigned char *) path);
-            if (is_loaded(h)) {
-                can_skip_load = true;
-            } else {
-                add_loaded_hash(h);
-            }
+            // jmj
+//        } else {
+//            unsigned long h = hash((unsigned char *) path);
+//            if (is_loaded(h)) {
+//                can_skip_load = true;
+//            } else {
+//                add_loaded_hash(h);
+//            }
         }
 
         if (!can_skip_load) {
@@ -235,22 +237,24 @@ JSValueRef get_value(JSContextRef ctx, char *namespace, char *name) {
     return val;
 }
 
-JSObjectRef get_function(char *namespace, char *name) {
-    JSValueRef val = get_value(ctx, namespace, name);
-    if (JSValueIsUndefined(ctx, val)) {
+JSObjectRef get_function(JSContextRef g_ctx, char *namespace, char *name) {
+    JSValueRef val = get_value(g_ctx, namespace, name);
+    if (JSValueIsUndefined(g_ctx, val)) {
         char buffer[1024];
         snprintf(buffer, 1024, "Failed to get function %s/%s\n", namespace, name);
             //engine_print(buffer);
         assert(false);
     }
-    return JSValueToObject(ctx, val, NULL);
+    return JSValueToObject(g_ctx, val, NULL);
 }
 
-typedef void (*timer_callback_t)(void *data);
+//typedef void (*timer_callback_t)(void *data);
+typedef void (*timer_callback_t)(JSContextRef, void *data);
 
 struct timer_data_t {
     long millis;
     timer_callback_t timer_callback;
+    JSContextRef ctx; // jmj JSGlobalContextRef
     void *data;
 };
 
@@ -272,20 +276,21 @@ void *timer_thread(void *data) {
         return NULL;
     }
 
-    timer_data->timer_callback(timer_data->data);
+    timer_data->timer_callback(timer_data->ctx, timer_data->data);
 
     free(data);
 
     return NULL;
 }
 
-int start_timer(long millis, timer_callback_t timer_callback, void *data) {
+int start_timer(long millis, timer_callback_t timer_callback, JSContextRef ctx, void *data) {
 
     struct timer_data_t *timer_data = malloc(sizeof(struct timer_data_t));
     if (!timer_data) return -1;
 
     timer_data->millis = millis;
     timer_data->timer_callback = timer_callback;
+    timer_data->ctx = ctx;
     timer_data->data = data;
 
     pthread_attr_t attr;
@@ -309,21 +314,21 @@ int start_timer(long millis, timer_callback_t timer_callback, void *data) {
     return err;
 }
 
-void do_run_timeout(void *data) {
+void do_run_timeout(JSContextRef g_ctx, void *data) {
 
     unsigned long *timeout_data = data;
 
     JSValueRef args[1];
-    args[0] = JSValueMakeNumber(ctx, (double)*timeout_data);
+    args[0] = JSValueMakeNumber(g_ctx, (double)*timeout_data);
     free(timeout_data);
 
     static JSObjectRef run_timeout_fn = NULL;
     if (!run_timeout_fn) {
-        run_timeout_fn = get_function("global", "REPLETE_RUN_TIMEOUT");
-        JSValueProtect(ctx, run_timeout_fn);
+        run_timeout_fn = get_function(g_ctx, "global", "REPLETE_RUN_TIMEOUT");
+        JSValueProtect(g_ctx, run_timeout_fn);
     }
     acquire_eval_lock();
-    JSObjectCallAsFunction(ctx, run_timeout_fn, NULL, 1, args, NULL);
+    JSObjectCallAsFunction(g_ctx, run_timeout_fn, NULL, 1, args, NULL);
     release_eval_lock();
 }
 
@@ -347,28 +352,28 @@ JSValueRef function_set_timeout(JSContextRef ctx, JSObjectRef function, JSObject
         unsigned long *timeout_data = malloc(sizeof(unsigned long));
         *timeout_data = timeout_id;
 
-        start_timer(millis, do_run_timeout, (void *) timeout_data);
+        start_timer(millis, do_run_timeout, ctx, (void *) timeout_data);
 
         return rv;
     }
     return JSValueMakeNull(ctx);
 }
 
-void do_run_interval(void *data) {
+void do_run_interval(JSContextRef g_ctx, void *data) {
 
     unsigned long *interval_data = data;
 
     JSValueRef args[1];
-    args[0] = JSValueMakeNumber(ctx, (double)*interval_data);
+    args[0] = JSValueMakeNumber(g_ctx, (double)*interval_data);
     free(interval_data);
 
     static JSObjectRef run_interval_fn = NULL;
     if (!run_interval_fn) {
-        run_interval_fn = get_function("global", "REPLETE_RUN_INTERVAL");
-        JSValueProtect(ctx, run_interval_fn);
+        run_interval_fn = get_function(g_ctx, "global", "REPLETE_RUN_INTERVAL");
+        JSValueProtect(g_ctx, run_interval_fn);
     }
     acquire_eval_lock();
-    JSObjectCallAsFunction(ctx, run_interval_fn, NULL, 1, args, NULL);
+    JSObjectCallAsFunction(g_ctx, run_interval_fn, NULL, 1, args, NULL);
     release_eval_lock();
 }
 
@@ -399,7 +404,7 @@ JSValueRef function_set_interval(JSContextRef ctx, JSObjectRef function, JSObjec
         unsigned long *interval_data = malloc(sizeof(unsigned long));
         *interval_data = curr_interval_id;
 
-        start_timer(millis, do_run_interval, (void *) interval_data);
+        start_timer(millis, do_run_interval, ctx, (void *) interval_data);
 
         return rv;
     }
@@ -538,16 +543,21 @@ void bootstrap(JSContextRef ctx) {
 
 - (void)initializeJavaScriptEnvironment {
 
-    ctx = JSGlobalContextCreate(NULL);
-    self.context = [JSContext contextWithJSGlobalContextRef:ctx];
+//    if (!ctx) {
+        _ctx = JSGlobalContextCreate(NULL);
+//    }
+    self.context = [JSContext contextWithJSGlobalContextRef:_ctx];
 
-    evaluate_script(ctx, "var global = this;", "<init>");
+//    JSValue *global = (__bridge JSValue *)(evaluate_script(ctx, "global", "<init>"));
+//    NSLog (@"%@", global);
 
-    register_global_function(ctx, "AMBLY_IMPORT_SCRIPT", function_import_script);
-    bootstrap(ctx);
+    evaluate_script(_ctx, "var global = this;", "<init>");
 
-    evaluate_script(ctx, "goog.provide('cljs.user');", "<init>");
-    evaluate_script(ctx, "goog.require('cljs.core');", "<init>");
+    register_global_function(_ctx, "AMBLY_IMPORT_SCRIPT", function_import_script);
+    bootstrap(_ctx);
+
+    evaluate_script(_ctx, "goog.provide('cljs.user');", "<init>");
+    evaluate_script(_ctx, "goog.require('cljs.core');", "<init>");
 
     [self requireAppNamespaces:self.context];
 

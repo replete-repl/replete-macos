@@ -1,14 +1,14 @@
 //
-//  RepleteMacOSUITests.swift
-//  RepleteMacOSUITests
+//  RepleteUITests.swift
+//  RepleteUITests
 //
-//  Created by Jason Jobe on 4/8/19.
+//  Created by Jason Jobe on 4/15/19.
 //  Copyright © 2019 Jason Jobe. All rights reserved.
 //
 
 import XCTest
 
-class RepleteMacOSUITests: XCTestCase {
+class RepleteUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

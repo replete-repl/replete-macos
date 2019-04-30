@@ -21,6 +21,8 @@ class ViewController: NSViewController {
             if historyIndex <= 0 { historyIndex = history.isEmpty ? -1 : 0 }
         }
     }
+    var enterPressed = false;
+    var initialized = false;
 
     var ctx = CSContext()
 
@@ -62,6 +64,7 @@ class ViewController: NSViewController {
             DispatchQueue.main.async {
                 // mark ready
                 NSLog("Ready");
+                self.initialized = true;
             }
         }
 
@@ -77,7 +80,73 @@ class ViewController: NSViewController {
             }
         }
     }
-
+    
+    func textView(_ textView: NSTextView, shouldChangeTextIn affectedCharRange: NSRange, replacementString: String?) -> Bool {
+        
+        if (replacementString == "\n") {
+            enterPressed = true;
+        }
+        
+        // Automatically evaluate if enter happens to be pressed when
+        // cursor is positioned at the end of the text.
+        if (enterPressed && affectedCharRange.location == textView.string.count) {
+            enterPressed = false
+            self.evaluate(textView)
+            return false;
+        }
+        
+        return true;
+    }
+    
+    func runParinfer() {
+        
+        let currentText = inputTextView!.string
+        let currentSelectedRange = inputTextView!.selectedRange
+        
+        if (currentText != "") {
+            
+            let result: Array = ctx.parinferFormat(currentText, pos:Int32(currentSelectedRange.location), enterPressed:enterPressed)
+            inputTextView!.string = result[0] as! String
+            inputTextView!.selectedRange = NSMakeRange(result[1] as! Int, 0)
+        }
+        enterPressed = false;
+    }
+    
+    // This is a native profile of Parinfer, meant for use when
+    // ClojureScript hasn't yet initialized, but yet the user
+    // is already typing. It covers extremely simple cases that
+    // could be typed immediately.
+    func runPoorMansParinfer() {
+        
+        let currentText = inputTextView!.string
+        let currentSelectedRange = inputTextView!.selectedRange
+        
+        if (currentText != "") {
+            if (currentSelectedRange.location == 1) {
+                if (currentText == "(") {
+                    inputTextView!.string = "()";
+                } else if (currentText == "[") {
+                    inputTextView!.string = "[]";
+                } else if (currentText == "{") {
+                    inputTextView!.string = "{}";
+                }
+                inputTextView!.selectedRange = currentSelectedRange;
+            }
+            
+        }
+    }
+    
+    func textDidChange(_ notification: Notification) {
+        guard let textView = notification.object as? NSTextView else { return }
+        if (textView == inputTextView) {
+            if (initialized) {
+                runParinfer()
+            } else {
+                runPoorMansParinfer()
+            }
+        }
+    }
+    
     func configure(textView: NSTextView?) {
         guard let textView = textView else { return }
         textView.font = NSFont(name: "Menlo", size: 12);

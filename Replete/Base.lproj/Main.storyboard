@@ -603,7 +603,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Commands" id="clf-nX-5mN">
                                     <items>
-                                        <menuItem title="evaluate" id="qnm-cJ-vbW">
+                                        <menuItem title="Eval" id="qnm-cJ-vbW">
                                             <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>

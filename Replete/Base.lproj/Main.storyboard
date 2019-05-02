@@ -718,6 +718,9 @@ DQ
                             <outlet property="delegate" destination="jGA-0Y-lOj" id="98r-iN-zZc"/>
                         </connections>
                     </window>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldCascadeWindows" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="iuB-nB-zDe" kind="relationship" relationship="window.shadowedContentViewController" id="lUK-cX-E3N"/>
                     </connections>

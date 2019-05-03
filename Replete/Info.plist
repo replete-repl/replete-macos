@@ -29,6 +29,10 @@
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>$(PROJECT_NAME)Help.help</string>
+	<key>CFBundleHelpBookName</key>
+	<string>com.fikesfarm.macos.$(PROJECT_NAME:rfc1034identifier).help</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
@@ -51,9 +55,5 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>CFBundleHelpBookName</key>
-	<string>com.wildthink.osx.$(PROJECT_NAME:rfc1034identifier).help</string>
-	<key>CFBundleHelpBookFolder</key>
-	<string>$(PROJECT_NAME)Help.help</string>
 </dict>
 </plist>

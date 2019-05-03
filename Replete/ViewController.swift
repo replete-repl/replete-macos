@@ -70,6 +70,11 @@ class ViewController: NSViewController {
 
     }
 
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        inputTextView?.window?.makeFirstResponder(inputTextView)
+    }
+    
     @objc func clicked(_ sender: NSClickGestureRecognizer) {
         if (sender.view as? NSTextView) == outputTextView {
             let pt = sender.location(in: outputTextView)

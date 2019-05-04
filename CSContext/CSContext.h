@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)initializeJavaScriptEnvironment;
 -(void)setPrintCallback:(void (^)(BOOL, NSString*))printCallback;
+-(void)setWidth:(int)width;
 -(void)evaluate:(NSString*)text;
 -(void)evaluate:(NSString*)text asExpression:(BOOL)expression;
 -(NSArray*)parinferFormat:(NSString*)text pos:(int)pos enterPressed:(BOOL)enterPressed;

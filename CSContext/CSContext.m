@@ -739,6 +739,11 @@ void bootstrap(JSContextRef ctx) {
     block(response == NSAlertFirstButtonReturn);
 }
 
+-(void)setWidth:(int)width
+{
+    [self.setWidthFn callWithArguments:@[@(width)]];
+}
+
 -(void)evaluate:(NSString*)text asExpression:(BOOL)expression
 {
     if (([text hasPrefix:@"(defmacro"] || [text hasPrefix:@"(defmacfn"])

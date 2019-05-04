@@ -255,7 +255,7 @@ typedef void (*timer_callback_t)(JSContextRef, void *data);
 struct timer_data_t {
     long millis;
     timer_callback_t timer_callback;
-    JSContextRef ctx; // jmj JSGlobalContextRef
+    JSGlobalContextRef ctx;
     void *data;
 };
 
@@ -291,7 +291,7 @@ int start_timer(long millis, timer_callback_t timer_callback, JSContextRef ctx, 
 
     timer_data->millis = millis;
     timer_data->timer_callback = timer_callback;
-    timer_data->ctx = ctx;
+    timer_data->ctx = JSContextGetGlobalContext(ctx);
     timer_data->data = data;
 
     pthread_attr_t attr;

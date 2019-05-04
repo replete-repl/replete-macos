@@ -260,6 +260,13 @@ extension ViewController {
         return history[historyIndex]
     }
 
+    var terminalWidth: Int32 {
+        let charWidth = NSFont(name: "Menlo", size: 12)!.maximumAdvancement.width
+        let viewWidth = self.outputTextView!.textContainer!.size.width;
+        // We subtract 2 to fudge down a little
+        return Int32(viewWidth / charWidth - 2)
+    }
+    
     @IBAction
     func moveBackInHistory(_ sender: Any?) {
         historyIndex -= 1
@@ -277,6 +284,7 @@ extension ViewController {
         guard let cmd = inputTextView?.string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines),
               !cmd.isEmpty else { return }
         loadMessage(true, isInput: true, text: cmd)
+        ctx.setWidth(self.terminalWidth);
         ctx.evaluate(cmd)
         inputTextView?.string = "";
     }

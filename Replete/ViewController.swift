@@ -236,7 +236,7 @@ extension ViewController {
         if let rng = selectedHistoryRange, let ts = outputTextView.textStorage {
             outputTextView.setSelectedRange(rng)
             outputTextView.scrollRangeToVisible(rng)
-            let str = ts.attributedSubstring(from: rng)
+            let str = ts.attributedSubstring(from: rng).string
             inputTextView.insertText(str, replacementRange: inputTextView.fullRange)
         }
     }

@@ -35,9 +35,6 @@ class ViewController: NSViewController {
         inputTextView?.delegate = self
         outputTextView?.delegate = self
 
-        let tap = NSClickGestureRecognizer(target: self, action: #selector(clicked(_:)))
-        outputTextView?.addGestureRecognizer(tap)
-
         ctx.setPrintCallback { (incoming: Bool, message: String!) -> Void in
             DispatchQueue.main.async {
                 self.loadMessage(incoming, text: message)
@@ -73,17 +70,6 @@ class ViewController: NSViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         inputTextView?.window?.makeFirstResponder(inputTextView)
-    }
-    
-    @objc func clicked(_ sender: NSClickGestureRecognizer) {
-        if (sender.view as? NSTextView) == outputTextView {
-            let pt = sender.location(in: outputTextView)
-            guard let loc = outputTextView?.characterIndexForInsertion(at: pt) else { return }
-            if let h_ndx = history.firstIndex (where: { $0.contains(loc) }) {
-                historyIndex = h_ndx
-                refresh()
-            }
-        }
     }
     
     func textView(_ textView: NSTextView, shouldChangeTextIn affectedCharRange: NSRange, replacementString: String?) -> Bool {

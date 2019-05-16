@@ -8,6 +8,15 @@
 
 import Cocoa
 
+enum InterfaceStyle : String {
+    case Dark, Light
+    
+    init() {
+        let type = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light"
+        self = InterfaceStyle(rawValue: type)!
+    }
+}
+
 class ViewController: NSViewController {
 
     @IBOutlet var inputTextView: NSTextView?
@@ -171,7 +180,20 @@ extension ViewController {
     func prepareMessageForDisplay(_  isInput: Bool, isMasthead: Bool, text: String) -> NSMutableAttributedString? {
         if (text != "\n") {
             let s = NSMutableAttributedString(string:text);
+            
+            let currentStyle = InterfaceStyle()
+            
+            var color : NSColor = NSColor.black;
+            if (currentStyle == InterfaceStyle.Dark) {
+                color = NSColor.white
+            }
+            
+            s.addAttribute(NSAttributedString.Key.foregroundColor,
+                           value: color as Any,
+                           range: NSMakeRange(0, s.length));
+            
             while (markString(s)) {};
+            
             s.addAttribute(NSAttributedString.Key.font,
                            value: NSFont(name: "Menlo", size: 12) as Any,
                            range: NSMakeRange(0, s.length));
@@ -191,8 +213,13 @@ extension ViewController {
             // Make the color of input and masthead gray
             
             if (isInput || isMasthead) {
+                var color : NSColor = NSColor.darkGray;
+                if (currentStyle == InterfaceStyle.Dark) {
+                    color = NSColor.lightGray
+                }
+                
                 s.addAttribute(NSAttributedString.Key.foregroundColor,
-                               value: NSColor.darkGray as Any,
+                               value: color as Any,
                                range: NSMakeRange(0, s.length));
             }
             
@@ -203,18 +230,31 @@ extension ViewController {
 
     func markString(_ s: NSMutableAttributedString) -> Bool {
         if (s.string.contains("\u{001b}[")) {
-
+            
+            let currentStyle = InterfaceStyle()
+            
             let text = s.string;
             let range : Range<String.Index> = text.range(of: "\u{001b}[")!;
             let index: Int = text.distance(from: text.startIndex, to: range.lowerBound);
             let index2 = text.index(text.startIndex, offsetBy: index + 2);
             var color : NSColor = NSColor.black;
+            if (currentStyle == InterfaceStyle.Dark) {
+                color = NSColor.white
+            }
             if (text[index2...].hasPrefix("34m")){
-                color = NSColor.blue;
+                if (currentStyle == InterfaceStyle.Dark) {
+                    color = NSColor(red: 0.0, green: 0.75, blue: 1.0, alpha: 1.0);
+                } else {
+                    color = NSColor.blue;
+                }
             } else if (text[index2...].hasPrefix("32m")){
                 color = NSColor(red: 0.0, green: 0.75, blue: 0.0, alpha: 1.0);
             } else if (text[index2...].hasPrefix("35m")){
-                color = NSColor(red: 0.75, green: 0.0, blue: 0.75, alpha: 1.0);
+                if (currentStyle == InterfaceStyle.Dark) {
+                    color = NSColor(red: 0.95, green: 0.5, blue: 0.95, alpha: 1.0);
+                } else {
+                    color = NSColor(red: 0.75, green: 0.0, blue: 0.75, alpha: 1.0);
+                }
             } else if (text[index2...].hasPrefix("31m")){
                 color = NSColor(red: 1, green: 0.33, blue: 0.33, alpha: 1.0);
             }

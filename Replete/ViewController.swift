@@ -255,8 +255,8 @@ extension ViewController {
     
     @IBAction
     func moveBackInHistory(_ sender: Any?) {
-        historyIndex -= 1
         refresh()
+        historyIndex -= 1
     }
 
     @IBAction

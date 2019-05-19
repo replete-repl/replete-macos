@@ -67,11 +67,8 @@ class ViewController: NSViewController {
         NSLog("Initializing...");
         DispatchQueue.global(qos: .background).async {
             self.ctx.initializeJavaScriptEnvironment()
-            DispatchQueue.main.async {
-                // mark ready
-                NSLog("Ready");
-                self.initialized = true;
-            }
+            self.initialized = true;
+            NSLog("Ready");
         }
 
     }
@@ -90,6 +87,9 @@ class ViewController: NSViewController {
         // Automatically evaluate if enter happens to be pressed when
         // cursor is positioned at the end of the text.
         if (enterPressed && affectedCharRange.location == textView.string.count) {
+            while (!self.initialized) {
+                Thread.sleep(forTimeInterval: 0.1);
+            }
             enterPressed = false
             self.evaluate(textView)
             return false;

@@ -311,8 +311,10 @@ extension ViewController {
               !cmd.isEmpty else { return }
         loadMessage(true, isInput: true, text: cmd)
         ctx.setWidth(self.terminalWidth);
-        ctx.evaluate(cmd)
         inputTextView?.string = "";
+        DispatchQueue.main.async {
+            self.ctx.evaluate(cmd)
+        }
     }
 }
 

@@ -27,6 +27,7 @@
 		9619850A22656C5F00B64BBA /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 9619850222656C5F00B64BBA /* io.c */; };
 		9619850D2265705300B64BBA /* Relay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619850C2265705300B64BBA /* Relay.swift */; };
 		9619850F2265770B00B64BBA /* NSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619850E2265770B00B64BBA /* NSExtensions.swift */; };
+		ED4A28A922A74A9F003A1C44 /* FiraCode-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED4A28A822A74A9F003A1C44 /* FiraCode-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		9619850E2265770B00B64BBA /* NSExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSExtensions.swift; sourceTree = "<group>"; };
 		961985142266CAEC00B64BBA /* RepleteHelp.help */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepleteHelp.help; sourceTree = BUILT_PRODUCTS_DIR; };
 		961985162266CAEC00B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED4A28A822A74A9F003A1C44 /* FiraCode-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraCode-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				961984C7226562B600B64BBA /* Replete.entitlements */,
 				9619850C2265705300B64BBA /* Relay.swift */,
 				9619850E2265770B00B64BBA /* NSExtensions.swift */,
+				ED4A28A822A74A9F003A1C44 /* FiraCode-Regular.otf */,
 			);
 			path = Replete;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4A28A922A74A9F003A1C44 /* FiraCode-Regular.otf in Resources */,
 				961984C2226562B600B64BBA /* Assets.xcassets in Resources */,
 				961984C5226562B600B64BBA /* Main.storyboard in Resources */,
 			);
@@ -625,7 +629,7 @@
 				CODE_SIGN_ENTITLEMENTS = Replete/Replete.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8S7Y6KVRU5;
+				DEVELOPMENT_TEAM = FMH366978P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Replete/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -149,7 +149,7 @@ class ViewController: NSViewController {
     
     func configure(textView: NSTextView?) {
         guard let textView = textView else { return }
-        textView.font = NSFont(name: "Menlo", size: 12);
+        textView.font = NSFont(name: "Fira Code", size: 12);
         textView.isAutomaticQuoteSubstitutionEnabled = false
         textView.enabledTextCheckingTypes = 0
     }
@@ -195,7 +195,7 @@ extension ViewController {
             while (markString(s)) {};
             
             s.addAttribute(NSAttributedString.Key.font,
-                           value: NSFont(name: "Menlo", size: 12) as Any,
+                           value: NSFont(name: "Fira Code", size: 12) as Any,
                            range: NSMakeRange(0, s.length));
             
             // Spacing between input and output

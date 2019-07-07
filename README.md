@@ -2,10 +2,6 @@
 
 ClojureScript REPL macOS app.
 
-#### WARNING: WIP
-
-We just started so <u>nothing</u> is working yet!
-
 Interested in iOS instead? See [Replete for iOS](https://github.com/replete-repl/replete-ios).
 
 Interested in Android instead? See [Replete for Android](https://github.com/replete-repl/replete-android).

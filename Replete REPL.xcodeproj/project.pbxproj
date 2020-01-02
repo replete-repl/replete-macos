@@ -48,7 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		961984B8226562B300B64BBA /* Replete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Replete.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		961984B8226562B300B64BBA /* Replete REPL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Replete REPL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		961984BB226562B300B64BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		961984BD226562B300B64BBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		961984BF226562B300B64BBA /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -56,10 +56,10 @@
 		961984C4226562B600B64BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		961984C6226562B600B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		961984C7226562B600B64BBA /* Replete.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Replete.entitlements; sourceTree = "<group>"; };
-		961984CC226562B600B64BBA /* RepleteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepleteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		961984CC226562B600B64BBA /* Replete REPLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Replete REPLTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		961984D0226562B600B64BBA /* RepleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepleteTests.swift; sourceTree = "<group>"; };
 		961984D2226562B600B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		961984D7226562B600B64BBA /* RepleteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepleteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		961984D7226562B600B64BBA /* Replete REPLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Replete REPLUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		961984DB226562B600B64BBA /* RepleteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepleteUITests.swift; sourceTree = "<group>"; };
 		961984DD226562B600B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		961984EA226564E900B64BBA /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -85,7 +85,7 @@
 		9619850B22656D0200B64BBA /* ufile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ufile.h; sourceTree = "<group>"; };
 		9619850C2265705300B64BBA /* Relay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relay.swift; sourceTree = "<group>"; };
 		9619850E2265770B00B64BBA /* NSExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSExtensions.swift; sourceTree = "<group>"; };
-		961985142266CAEC00B64BBA /* RepleteHelp.help */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepleteHelp.help; sourceTree = BUILT_PRODUCTS_DIR; };
+		961985142266CAEC00B64BBA /* Replete REPLHelp.help */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Replete REPLHelp.help"; sourceTree = BUILT_PRODUCTS_DIR; };
 		961985162266CAEC00B64BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED4A28A822A74A9F003A1C44 /* FiraCode-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraCode-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,10 +141,10 @@
 		961984B9226562B300B64BBA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				961984B8226562B300B64BBA /* Replete.app */,
-				961984CC226562B600B64BBA /* RepleteTests.xctest */,
-				961984D7226562B600B64BBA /* RepleteUITests.xctest */,
-				961985142266CAEC00B64BBA /* RepleteHelp.help */,
+				961984B8226562B300B64BBA /* Replete REPL.app */,
+				961984CC226562B600B64BBA /* Replete REPLTests.xctest */,
+				961984D7226562B600B64BBA /* Replete REPLUITests.xctest */,
+				961985142266CAEC00B64BBA /* Replete REPLHelp.help */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,9 +230,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		961984B7226562B300B64BBA /* Replete */ = {
+		961984B7226562B300B64BBA /* Replete REPL */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 961984E0226562B600B64BBA /* Build configuration list for PBXNativeTarget "Replete" */;
+			buildConfigurationList = 961984E0226562B600B64BBA /* Build configuration list for PBXNativeTarget "Replete REPL" */;
 			buildPhases = (
 				961984B4226562B300B64BBA /* Sources */,
 				961984B5226562B300B64BBA /* Frameworks */,
@@ -242,14 +242,14 @@
 			);
 			dependencies = (
 			);
-			name = Replete;
+			name = "Replete REPL";
 			productName = Replete;
-			productReference = 961984B8226562B300B64BBA /* Replete.app */;
+			productReference = 961984B8226562B300B64BBA /* Replete REPL.app */;
 			productType = "com.apple.product-type.application";
 		};
-		961984CB226562B600B64BBA /* RepleteTests */ = {
+		961984CB226562B600B64BBA /* Replete REPLTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 961984E3226562B600B64BBA /* Build configuration list for PBXNativeTarget "RepleteTests" */;
+			buildConfigurationList = 961984E3226562B600B64BBA /* Build configuration list for PBXNativeTarget "Replete REPLTests" */;
 			buildPhases = (
 				961984C8226562B600B64BBA /* Sources */,
 				961984C9226562B600B64BBA /* Frameworks */,
@@ -260,14 +260,14 @@
 			dependencies = (
 				961984CE226562B600B64BBA /* PBXTargetDependency */,
 			);
-			name = RepleteTests;
+			name = "Replete REPLTests";
 			productName = RepleteTests;
-			productReference = 961984CC226562B600B64BBA /* RepleteTests.xctest */;
+			productReference = 961984CC226562B600B64BBA /* Replete REPLTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		961984D6226562B600B64BBA /* RepleteUITests */ = {
+		961984D6226562B600B64BBA /* Replete REPLUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 961984E6226562B600B64BBA /* Build configuration list for PBXNativeTarget "RepleteUITests" */;
+			buildConfigurationList = 961984E6226562B600B64BBA /* Build configuration list for PBXNativeTarget "Replete REPLUITests" */;
 			buildPhases = (
 				961984D3226562B600B64BBA /* Sources */,
 				961984D4226562B600B64BBA /* Frameworks */,
@@ -278,14 +278,14 @@
 			dependencies = (
 				961984D9226562B600B64BBA /* PBXTargetDependency */,
 			);
-			name = RepleteUITests;
+			name = "Replete REPLUITests";
 			productName = RepleteUITests;
-			productReference = 961984D7226562B600B64BBA /* RepleteUITests.xctest */;
+			productReference = 961984D7226562B600B64BBA /* Replete REPLUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		961985132266CAEC00B64BBA /* RepleteHelp */ = {
+		961985132266CAEC00B64BBA /* Replete REPLHelp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 961985172266CAEC00B64BBA /* Build configuration list for PBXNativeTarget "RepleteHelp" */;
+			buildConfigurationList = 961985172266CAEC00B64BBA /* Build configuration list for PBXNativeTarget "Replete REPLHelp" */;
 			buildPhases = (
 				961985102266CAEC00B64BBA /* Sources */,
 				961985112266CAEC00B64BBA /* Frameworks */,
@@ -296,9 +296,9 @@
 			);
 			dependencies = (
 			);
-			name = RepleteHelp;
+			name = "Replete REPLHelp";
 			productName = RepleteHelp;
-			productReference = 961985142266CAEC00B64BBA /* RepleteHelp.help */;
+			productReference = 961985142266CAEC00B64BBA /* Replete REPLHelp.help */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -336,7 +336,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 961984B3226562B300B64BBA /* Build configuration list for PBXProject "Replete" */;
+			buildConfigurationList = 961984B3226562B300B64BBA /* Build configuration list for PBXProject "Replete REPL" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -349,10 +349,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				961984B7226562B300B64BBA /* Replete */,
-				961984CB226562B600B64BBA /* RepleteTests */,
-				961984D6226562B600B64BBA /* RepleteUITests */,
-				961985132266CAEC00B64BBA /* RepleteHelp */,
+				961984B7226562B300B64BBA /* Replete REPL */,
+				961984CB226562B600B64BBA /* Replete REPLTests */,
+				961984D6226562B600B64BBA /* Replete REPLUITests */,
+				961985132266CAEC00B64BBA /* Replete REPLHelp */,
 			);
 		};
 /* End PBXProject section */
@@ -460,12 +460,12 @@
 /* Begin PBXTargetDependency section */
 		961984CE226562B600B64BBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 961984B7226562B300B64BBA /* Replete */;
+			target = 961984B7226562B300B64BBA /* Replete REPL */;
 			targetProxy = 961984CD226562B600B64BBA /* PBXContainerItemProxy */;
 		};
 		961984D9226562B600B64BBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 961984B7226562B300B64BBA /* Replete */;
+			target = 961984B7226562B300B64BBA /* Replete REPL */;
 			targetProxy = 961984D8226562B600B64BBA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -661,7 +661,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Replete.app/Contents/MacOS/Replete";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Replete REPL.app/Contents/MacOS/Replete REPL";
 			};
 			name = Debug;
 		};
@@ -682,7 +682,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wildthink.osx.RepleteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Replete.app/Contents/MacOS/Replete";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Replete REPL.app/Contents/MacOS/Replete REPL";
 			};
 			name = Release;
 		};
@@ -759,7 +759,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		961984B3226562B300B64BBA /* Build configuration list for PBXProject "Replete" */ = {
+		961984B3226562B300B64BBA /* Build configuration list for PBXProject "Replete REPL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				961984DE226562B600B64BBA /* Debug */,
@@ -768,7 +768,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		961984E0226562B600B64BBA /* Build configuration list for PBXNativeTarget "Replete" */ = {
+		961984E0226562B600B64BBA /* Build configuration list for PBXNativeTarget "Replete REPL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				961984E1226562B600B64BBA /* Debug */,
@@ -777,7 +777,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		961984E3226562B600B64BBA /* Build configuration list for PBXNativeTarget "RepleteTests" */ = {
+		961984E3226562B600B64BBA /* Build configuration list for PBXNativeTarget "Replete REPLTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				961984E4226562B600B64BBA /* Debug */,
@@ -786,7 +786,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		961984E6226562B600B64BBA /* Build configuration list for PBXNativeTarget "RepleteUITests" */ = {
+		961984E6226562B600B64BBA /* Build configuration list for PBXNativeTarget "Replete REPLUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				961984E7226562B600B64BBA /* Debug */,
@@ -795,7 +795,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		961985172266CAEC00B64BBA /* Build configuration list for PBXNativeTarget "RepleteHelp" */ = {
+		961985172266CAEC00B64BBA /* Build configuration list for PBXNativeTarget "Replete REPLHelp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				961985182266CAEC00B64BBA /* Debug */,

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,11 +11,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Replete" id="1Xt-HY-uBw">
+                            <menuItem title="Replete REPL" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Replete" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Replete REPL" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Replete" id="5kV-Vb-QxS">
+                                        <menuItem title="About Replete REPL" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -30,7 +29,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Replete" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide Replete REPL" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -48,7 +47,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Replete" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit Replete REPL" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -262,14 +261,14 @@ DQ
                                                 <rect key="frame" x="0.0" y="0.0" width="500" height="310"/>
                                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="qhy-oV-Sgs">
                                                     <rect key="frame" x="0.0" y="0.0" width="500" height="310"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="bar" spellingCorrection="YES" smartInsertDelete="YES" id="Qxg-df-C9U">
-                                                            <rect key="frame" x="0.0" y="0.0" width="490" height="300"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="490" height="310"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                            <size key="minSize" width="490" height="300"/>
+                                                            <size key="minSize" width="500" height="310"/>
                                                             <size key="maxSize" width="500" height="10000000"/>
                                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         </textView>
@@ -281,7 +280,7 @@ DQ
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="ejR-bb-cwg">
-                                                    <rect key="frame" x="482" y="5" width="16" height="300"/>
+                                                    <rect key="frame" x="483" y="5" width="15" height="300"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>
@@ -301,14 +300,14 @@ DQ
                                                 <rect key="frame" x="0.0" y="0.0" width="500" height="80"/>
                                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Iq1-h6-XJb">
                                                     <rect key="frame" x="0.0" y="0.0" width="500" height="80"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="bar" spellingCorrection="YES" smartInsertDelete="YES" id="SSS-Ar-UXL">
-                                                            <rect key="frame" x="0.0" y="0.0" width="492" height="69"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="492" height="80"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                            <size key="minSize" width="492" height="69"/>
+                                                            <size key="minSize" width="500" height="80"/>
                                                             <size key="maxSize" width="500" height="10000000"/>
                                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         </textView>
@@ -320,7 +319,7 @@ DQ
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="r3f-Ve-Tkh">
-                                                    <rect key="frame" x="482" y="6" width="16" height="69"/>
+                                                    <rect key="frame" x="483" y="6" width="15" height="69"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>

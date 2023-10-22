@@ -19,6 +19,6 @@ Happy to take PRs!
 
 # License
 
-Copyright © 2019–2020 Jason Jobe, Mike Fikes, and Contributors
+Copyright © 2019–2023 Jason Jobe, Mike Fikes, and Contributors
 
 Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.

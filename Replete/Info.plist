@@ -25,6 +25,8 @@
 			<string>Editor</string>
 			<key>LSTypeIsPackage</key>
 			<integer>1</integer>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
 			<key>NSDocumentClass</key>
 			<string>$(PRODUCT_MODULE_NAME).Document</string>
 		</dict>
